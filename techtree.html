@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oysterworld Physical AI - Tech Tree</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%); }
+        .card { background: rgba(255,255,255,0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .tech-tree-line { border-left: 2px dashed; }
+        .branch-label { writing-mode: vertical-lr; transform: rotate(180deg); }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+    <div class="container mx-auto px-4 py-8 max-w-7xl">
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Oysterworld Physical AI
+            </h1>
+            <p class="text-gray-400 text-lg">Technology Tree - Dependencies & Origins</p>
+            <p class="text-cyan-400 text-sm mt-2">Updated: 2026-03-12 19:00 • Auto-monitored</p>
+        </header>
+
+        <!-- Legend -->
+        <section class="mb-8">
+            <div class="card rounded-xl p-4">
+                <div class="flex flex-wrap justify-center gap-6 text-sm">
+                    <div><span class="text-purple-400">●</span> World Model (JEPA/Cosmos)</div>
+                    <div><span class="text-blue-400">●</span> Edge Processing (TTT/VMamba)</div>
+                    <div><span class="text-green-400">●</span> VLA (Vision-Language-Action)</div>
+                    <div><span class="text-yellow-400">●</span> Simulation</div>
+                    <div><span class="text-red-400">●</span> Breaking/New</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH TREE -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                <span class="w-2 h-8 bg-purple-400 mr-3 rounded"></span>
+                🌳 World Model Branch (核心)
+            </h2>
+            
+            <!-- JEPA Family -->
+            <div class="card rounded-xl p-6 mb-4 border-l-4 border-purple-500">
+                <h3 class="text-xl font-bold text-purple-400 mb-4">JEPA Family (Yann LeCun)</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Root: I-JEPA -->
+                    <div class="card rounded-lg p-4 border border-purple-500/50">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-purple-400 font-bold">I-JEPA</span>
+                            <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded">ROOT</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Image JEPA - masked prediction on static images</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: MAE, self-supervised learning</div>
+                    </div>
+                    
+                    <!-- V-JEPA -->
+                    <div class="card rounded-lg p-4 border border-purple-500/50">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-purple-400 font-bold">V-JEPA</span>
+                            <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded">2024</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Video JEPA - temporal prediction</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: I-JEPA + temporal modeling</div>
+                    </div>
+                    
+                    <!-- V-JEPA 2 -->
+                    <div class="card rounded-lg p-4 border border-purple-500/50">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-purple-400 font-bold">V-JEPA 2</span>
+                            <span class="text-xs bg-red-500/20 text-red-400 px-2 py-0.5 rounded">NEW</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">State-of-the-art physical reasoning</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: V-JEPA + benchmarks</div>
+                    </div>
+                    
+                    <!-- PEVA -->
+                    <div class="card rounded-lg p-4 border border-red-500/50 breaking">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-red-400 font-bold">PEVA</span>
+                            <span class="text-xs bg-red-500/20 text-red-400 px-2 py-0.5 rounded">HOT</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">16-second coherent scene prediction</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: V-JEPA + LeCun team</div>
+                    </div>
+                    
+                    <!-- Value-Guided JEPA -->
+                    <div class="card rounded-lg p-4 border border-purple-500/50">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-purple-400 font-bold">Value-Guided JEPA</span>
+                            <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded">Jan 2026</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">JEPA + value functions for action planning</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: JEPA + reinforcement learning</div>
+                    </div>
+                    
+                    <!-- VL-JEPA -->
+                    <div class="card rounded-lg p-4 border border-purple-500/50">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-purple-400 font-bold">VL-JEPA</span>
+                            <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-0.5 rounded">2025</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Vision-Language JEPA</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: V-JEPA + LLM</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NVIDIA Cosmos Family -->
+            <div class="card rounded-xl p-6 mb-4 border-l-4 border-green-500">
+                <h3 class="text-xl font-bold text-green-400 mb-4">NVIDIA Cosmos Family</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="card rounded-lg p-4 border border-green-500/50">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-green-400 font-bold">Cosmos</span>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-0.5 rounded">2M+</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">World Foundation Model Platform</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: Diffusion + World Models</div>
+                    </div>
+                    <div class="card rounded-lg p-4 border border-green-500/50">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-green-400 font-bold">Cosmos Reason</span>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-0.5 rounded">7B</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Reasoning model for Physical AI</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: Cosmos + LLM</div>
+                    </div>
+                    <div class="card rounded-lg p-4 border border-green-500/50">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-green-400 font-bold">Cosmos Transfer</span>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-0.5 rounded">Sim2Real</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">World-to-world transfer</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: ControlNet + diffusion</div>
+                    </div>
+                    <div class="card rounded-lg p-4 border border-green-500/50">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-green-400 font-bold">GR00T</span>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-0.5 rounded">Robot</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">Robot foundation model</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: VLA + robotics</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other World Models -->
+            <div class="card rounded-xl p-6 border-l-4 border-red-500">
+                <h3 class="text-xl font-bold text-red-400 mb-4">Other Major Players</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="card rounded-lg p-4 border border-red-500/50 breaking">
+                        <span class="text-red-400 font-bold">Genie 3</span>
+                        <p class="text-gray-400 text-sm">Google DeepMind - 24fps 3D</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: World model + game engines</div>
+                    </div>
+                    <div class="card rounded-lg p-4 border border-red-500/50 breaking">
+                        <span class="text-red-400 font-bold">Marble</span>
+                        <p class="text-gray-400 text-sm">World Labs (Fei-Fei Li)</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: NeRF + diffusion</div>
+                    </div>
+                    <div class="card rounded-lg p-4 border border-red-500/50 breaking">
+                        <span class="text-red-400 font-bold">Dexterity Foresight</span>
+                        <p class="text-gray-400 text-sm">4D packing agent</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: World model + logistics</div>
+                    </div>
+                    <div class="card rounded-lg p-4 border border-purple-500/50">
+                        <span class="text-purple-400 font-bold">Our VJEPA</span>
+                        <p class="text-gray-400 text-sm">Implementation - 128-dim latent</p>
+                        <div class="text-xs text-cyan-400 mt-2">Our implementation</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VLA Branch -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                <span class="w-2 h-8 bg-green-400 mr-3 rounded"></span>
+                🎯 VLA Branch (Vision-Language-Action)
+            </h2>
+            <div class="card rounded-xl p-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="card rounded-lg p-4">
+                        <span class="text-green-400 font-bold">RT-1</span>
+                        <p class="text-gray-400 text-sm">Google - first VLA</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: Transformers + robotics</div>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="text-green-400 font-bold">RT-2</span>
+                        <p class="text-gray-400 text-sm">RT-1 + LLM + vision</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: RT-1 + PaLM-E</div>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="text-green-400 font-bold">π0</span>
+                        <p class="text-gray-400 text-sm">Physical Intelligence</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: Diffusion policy + VLA</div>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="text-green-400 font-bold">Green-VLA</span>
+                        <p class="text-gray-400 text-sm">5-stage curriculum</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: VLA + curriculum learning</div>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="text-green-400 font-bold">Helix</span>
+                        <p class="text-gray-400 text-sm">Figure AI</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: VLA + humanoid</div>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="text-green-400 font-bold">GR00T N1</span>
+                        <p class="text-gray-400 text-sm">NVIDIA robotics</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: VLA + Cosmos</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Edge Branch -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                <span class="w-2 h-8 bg-blue-400 mr-3 rounded"></span>
+                ⚡ Edge Processing Branch
+            </h2>
+            <div class="card rounded-xl p-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="card rounded-lg p-4 border-l-4 border-blue-500">
+                        <span class="text-blue-400 font-bold">Spatial-TTT</span>
+                        <p class="text-gray-400 text-sm">Our implementation</p>
+                        <div class="text-xs text-cyan-400 mt-2">Running:8006</div>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="text-blue-400 font-bold">TTT-Linear</span>
+                        <p class="text-gray-400 text-sm">Stanford, Dec 2025</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: TTT + linear layers</div>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="text-blue-400 font-bold">TTT-Video</span>
+                        <p class="text-gray-400 text-sm">1-min video, CVPR 2025</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: TTT + diffusion</div>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="text-blue-400 font-bold">VMamba</span>
+                        <p class="text-gray-400 text-sm">State Space Model</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: Mamba + vision</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulation Branch -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                <span class="w-2 h-8 bg-yellow-400 mr-3 rounded"></span>
+                🎮 Simulation Branch
+            </h2>
+            <div class="card rounded-xl p-6">
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="card rounded-lg p-4">
+                        <span class="text-yellow-400 font-bold">3D Gaussian</span>
+                        <p class="text-gray-400 text-sm">Real-time rendering</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: NeRF + point clouds</div>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="text-yellow-400 font-bold">RadSplat</span>
+                        <p class="text-gray-400 text-sm">Edge optimization</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: 3DGS + pruning</div>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="text-yellow-400 font-bold">Isaac Lab</span>
+                        <p class="text-gray-400 text-sm">NVIDIA robotics sim</p>
+                        <div class="text-xs text-gray-500 mt-2">借鉴: MuJoCo + GPU</div>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="text-yellow-400 font-bold">CrowdPhysics</span>
+                        <p class="text-gray-400 text-sm">Our simulation</p>
+                        <div class="text-xs text-cyan-400 mt-2">Our implementation</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Major Players & Companies -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                <span class="w-2 h-8 bg-red-400 mr-3 rounded"></span>
+                🏢 Major Players & Companies
+            </h2>
+            
+            <!-- World Labs / Fei-Fei Li -->
+            <div class="card rounded-xl p-6 mb-4 border-l-4 border-red-500">
+                <h3 class="text-xl font-bold text-red-400 mb-4">🌐 World Labs (Fei-Fei Li) - $1B Funding</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="card rounded-lg p-4 border border-red-500/50">
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">Marble</span>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-0.5 rounded">Commercial</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mt-2">3D world from single image/text</p>
+                        <div class="text-xs text-gray-500 mt-1">借鉴: NeRF + diffusion + spatial intelligence</div>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <p class="text-gray-400 text-sm">$230M → $1B funding</p>
+                        <p class="text-gray-400 text-sm">Investors: NVIDIA, AMD, Autodesk</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AMI Labs / Yann LeCun -->
+            <div class="card rounded-xl p-6 mb-4 border-l-4 border-purple-500">
+                <h3 class="text-xl font-bold text-purple-400 mb-4">🎯 AMI Labs (Yann LeCun) - $5B Valuation</h3>
+                <p class="text-gray-400">Left Meta Jan 2026, focused on world models</p>
+            </div>
+
+            <!-- NVIDIA -->
+            <div class="card rounded-xl p-6 mb-4 border-l-4 border-green-500">
+                <h3 class="text-xl font-bold text-green-400 mb-4">🟢 NVIDIA - Physical AI Platform</h3>
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="card rounded-lg p-4">
+                        <span class="font-bold">Cosmos</span>
+                        <p class="text-gray-400 text-sm">World Foundation Model</p>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="font-bold">GR00T</span>
+                        <p class="text-gray-400 text-sm">Robot Foundation Model</p>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="font-bold">Jetson T4000</span>
+                        <p class="text-gray-400 text-sm">Edge AI (4x efficiency)</p>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="font-bold">Isaac Lab</span>
+                        <p class="text-gray-400 text-sm">Robotics Simulation</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tesla -->
+            <div class="card rounded-xl p-6 mb-4 border-l-4 border-blue-500">
+                <h3 class="text-xl font-bold text-blue-400 mb-4">🚗 Tesla - Optimus Gen 2</h3>
+                <p class="text-gray-400">General-purpose humanoid robot for industrial & domestic tasks</p>
+            </div>
+
+            <!-- Figure AI -->
+            <div class="card rounded-xl p-6 mb-4 border-l-4 border-yellow-500">
+                <h3 class="text-xl font-bold text-yellow-400 mb-4">🤖 Figure AI - $854M Funding</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="card rounded-lg p-4">
+                        <span class="font-bold">Helix</span>
+                        <p class="text-gray-400 text-sm">VLA for humanoid</p>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="font-bold">Figure 01</span>
+                        <p class="text-gray-400 text-sm">Commercial humanoid</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boston Dynamics -->
+            <div class="card rounded-xl p-6 mb-4 border-l-4 border-orange-500">
+                <h3 class="text-xl font-bold text-orange-400 mb-4">🐕 Boston Dynamics - Atlas</h3>
+                <p class="text-gray-400">New industrial humanoid with AI, autonomous navigation, self-charging</p>
+            </div>
+
+            <!-- Dexterity AI -->
+            <div class="card rounded-xl p-6 mb-4 border-l-4 border-cyan-500">
+                <h3 class="text-xl font-bold text-cyan-400 mb-4">📦 Dexterity AI - Foresight</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="card rounded-lg p-4">
+                        <span class="font-bold">Foresight</span>
+                        <p class="text-gray-400 text-sm">World model for logistics</p>
+                        <span class="text-xs bg-red-500/20 text-red-400 px-2 py-0.5 rounded">4D packing agent</span>
+                    </div>
+                    <div class="card rounded-lg p-4">
+                        <span class="font-bold">$50K API Challenge</span>
+                        <p class="text-gray-400 text-sm">Student competition</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1X Technologies -->
+            <div class="card rounded-xl p-6 mb-4 border-l-4 border-pink-500">
+                <h3 class="text-xl font-bold text-pink-400 mb-4">1X Technologies - NEO</h3>
+                <p class="text-gray-400">Delivering humanoids to homes, $100M+ funding</p>
+            </div>
+
+            <!-- RAI Institute -->
+            <div class="card rounded-xl p-6 mb-4 border-l-4 border-gray-500">
+                <h3 class="text-xl font-bold text-gray-400 mb-4">🏛️ RAI Institute (Boston Dynamics AI Institute)</h3>
+                <p class="text-gray-400">235 employees, Cambridge, solving fundamental robotics challenges</p>
+            </div>
+        </section>
+
+        <!-- Tech Tree Summary -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">📊 Technology Origins Map</h2>
+            <div class="card rounded-xl p-6 overflow-x-auto">
+                <pre class="text-xs text-gray-400 whitespace-pre">
+┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+│                              PHYSICAL AI TECH TREE                                       │
+├─────────────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                         │
+│  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐        │
+│  │   MAE       │────▶│   I-JEPA     │────▶│   V-JEPA    │────▶│  V-JEPA 2    │        │
+│  │ (masked)    │     │  (LeCun)     │     │  (video)    │     │ (physical)   │        │
+│  └──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘        │
+│                                                                     │                    │
+│                                                                     ▼                    │
+│                                                              ┌──────────────┐            │
+│                                                              │    PEVA      │            │
+│                                                              │ (16-sec)     │            │
+│                                                              └──────────────┘            │
+│  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐        │
+│  │  Diffusion   │────▶│   Cosmos     │────▶│  Cosmos     │────▶│   GR00T      │        │
+│  │  Models     │     │  (NVIDIA)    │     │  Reason     │     │  (Robot)     │        │
+│  └──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘        │
+│                                                                                         │
+│  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐        │
+│  │ Transformers │────▶│    RT-1      │────▶│    RT-2      │────▶│     VLA      │        │
+│  │              │     │   (Google)   │     │  (LLM+vis)   │     │  (general)   │        │
+│  └──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘        │
+│                                                                     │                    │
+│                              ┌─────────────────────────────────────┘                    │
+│                              ▼                                                            │
+│                      ┌──────────────┐     ┌──────────────┐                               │
+│                      │   π0         │     │  Green-VLA   │                               │
+│                      │ (PhysicalAI) │     │ (Sber)       │                               │
+│                      └──────────────┘     └──────────────┘                               │
+│                                                                                         │
+│  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐                            │
+│  │    Mamba    │────▶│   VMamba     │     │  Edge TTT   │                            │
+│  │ (SSM)       │     │  (vision)    │     │              │                            │
+│  └──────────────┘     └──────────────┘     └──────────────┘                            │
+│                                                                     │                    │
+│                                                                     ▼                    │
+│                      ┌──────────────────────────────────────────────────────┐            │
+│                      │              🦪 OYSTERWORLD STACK                     │            │
+│                      │  ClawGlasses ─▶ relay ─▶ Spatial-TTT ─▶ VJEPA    │            │
+│                      │        │                                      │            │            │
+│                      │        └──────────▶ Hermes-Agent ────────────┘            │            │
+│                      └──────────────────────────────────────────────────────────┘            │
+└─────────────────────────────────────────────────────────────────────────────────────────────┘
+                </pre>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 py-8">
+            <p>Oysterworld Physical AI • Tech Tree</p>
+            <p class="text-sm mt-2">Auto-updated every 30 minutes</p>
+        </footer>
+    </div>
+</body>
+</html>
