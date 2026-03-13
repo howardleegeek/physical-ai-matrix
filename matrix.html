@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oysterworld Physical AI - Tech Matrix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%); }
+        .card { background: rgba(255,255,255,0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+        .status-running { background: #10b981; box-shadow: 0 0 10px #10b981; }
+        .status-implemented { background: #3b82f6; }
+        .status-research { background: #8b5cf6; }
+        .status-spec { background: #f59e0b; }
+        .status-hot { background: #ef4444; box-shadow: 0 0 10px #ef4444; animation: pulse 1.5s infinite; }
+        .pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .tech-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500; }
+        .breaking { border: 2px solid #ef4444; animation: glow 2s infinite; }
+        @keyframes glow { 0%, 100% { box-shadow: 0 0 5px #ef4444; } 50% { box-shadow: 0 0 20px #ef4444; } }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+    <div class="container mx-auto px-4 py-8 max-w-7xl">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Oysterworld Physical AI
+            </h1>
+            <p class="text-gray-400 text-lg">Distributed Sensor Network + 4D Living World Model</p>
+            <p class="text-cyan-400 text-sm mt-2">🆕 Auto-updated: 2026-03-12</p>
+            <div class="mt-4 flex justify-center gap-4">
+                <span class="status-dot status-running pulse"></span>
+                <span class="text-green-400">Spatial-TTT: localhost:8006</span>
+            </div>
+        </header>
+
+        <!-- 🔥 BREAKING NEWS -->
+        <section class="mb-12 breaking rounded-2xl p-6 bg-red-500/10">
+            <h2 class="text-2xl font-semibold mb-4 flex items-center">
+                <span class="w-2 h-8 bg-red-500 mr-3 rounded"></span>
+                🔥 Breaking: World Models Race 2026
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card rounded-xl p-4 border-red-500/30">
+                    <div class="text-red-400 font-bold text-xl">$5B</div>
+                    <div class="text-sm">Yann LeCun left Meta → AMI Labs</div>
+                    <div class="text-xs text-gray-500 mt-1">Jan 2026</div>
+                </div>
+                <div class="card rounded-xl p-4 border-red-500/30">
+                    <div class="text-red-400 font-bold text-xl">Genie 3</div>
+                    <div class="text-sm">Google DeepMind - 24fps 3D</div>
+                    <div class="text-xs text-gray-500 mt-1">Real-time interactive</div>
+                </div>
+                <div class="card rounded-xl p-4 border-red-500/30">
+                    <div class="text-red-400 font-bold text-xl">Marble</div>
+                    <div class="text-sm">World Labs (Fei-Fei Li)</div>
+                    <div class="text-xs text-gray-500 mt-1">Commercial - $0-95/mo</div>
+                </div>
+                <div class="card rounded-xl p-4 border-red-500/30">
+                    <div class="text-red-400 font-bold text-xl">2M+</div>
+                    <div class="text-sm">NVIDIA Cosmos downloads</div>
+                    <div class="text-xs text-gray-500 mt-1">Physical AI standard</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MECE Framework -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                <span class="w-2 h-8 bg-cyan-400 mr-3 rounded"></span>
+                MECE Technology Framework
+            </h2>
+            <div class="grid md:grid-cols-6 gap-3">
+                <div class="card rounded-xl p-4 text-center border-cyan-500/30"><div class="text-2xl mb-2">📡</div><div class="font-semibold text-cyan-400">Sensors</div></div>
+                <div class="card rounded-xl p-4 text-center border-blue-500/30"><div class="text-2xl mb-2">⚡</div><div class="font-semibold text-blue-400">Edge</div></div>
+                <div class="card rounded-xl p-4 text-center border-purple-500/30"><div class="text-2xl mb-2">🧠</div><div class="font-semibold text-purple-400">World Model</div></div>
+                <div class="card rounded-xl p-4 text-center border-green-500/30"><div class="text-2xl mb-2">🎯</div><div class="font-semibold text-green-400">Reasoning</div></div>
+                <div class="card rounded-xl p-4 text-center border-yellow-500/30"><div class="text-2xl mb-2">🎮</div><div class="font-semibold text-yellow-400">Simulation</div></div>
+                <div class="card rounded-xl p-4 text-center border-red-500/30"><div class="text-2xl mb-2">💾</div><div class="font-semibold text-red-400">Storage</div></div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div class="card rounded-xl p-6 text-center"><div class="text-3xl font-bold text-cyan-400">97+</div><div class="text-gray-400 text-sm">Projects</div></div>
+            <div class="card rounded-xl p-6 text-center"><div class="text-3xl font-bold text-blue-400">300+</div><div class="text-gray-400 text-sm">Specs</div></div>
+            <div class="card rounded-xl p-6 text-center"><div class="text-3xl font-bold text-purple-400">20+</div><div class="text-gray-400 text-sm">Technologies</div></div>
+            <div class="card rounded-xl p-6 text-center"><div class="text-3xl font-bold text-green-400">5</div><div class="text-gray-400 text-sm">Running</div></div>
+        </div>
+
+        <!-- 1. Sensors -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center"><span class="w-2 h-8 bg-cyan-400 mr-3 rounded"></span>1. Sensors</h2>
+            <div class="grid md:grid-cols-4 gap-4">
+                <div class="card rounded-xl p-6"><h3 class="font-semibold">ClawGlasses</h3><p class="text-gray-400 text-sm">AI Smart Glasses</p><span class="tech-tag bg-cyan-500/20 text-cyan-400">Prototype</span></div>
+                <div class="card rounded-xl p-6"><h3 class="font-semibold">ClawPhones</h3><p class="text-gray-400 text-sm">Mobile app</p><span class="tech-tag bg-green-500/20 text-green-400">Active</span></div>
+                <div class="card rounded-xl p-6"><h3 class="font-semibold">IP Cameras</h3><p class="text-gray-400 text-sm">RTSP streams</p><span class="tech-tag bg-blue-500/20 text-blue-400">Integrate</span></div>
+                <div class="card rounded-xl p-6"><h3 class="font-semibold">GPS/IMU</h3><p class="text-gray-400 text-sm">H3 indexing</p><span class="tech-tag bg-purple-500/20 text-purple-400">Data</span></div>
+            </div>
+        </section>
+
+        <!-- 2. Edge: TTT -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center"><span class="w-2 h-8 bg-blue-400 mr-3 rounded"></span>2. Edge (Test-Time Training)</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="card rounded-xl p-6 border-blue-500/30">
+                    <h3 class="font-semibold">Spatial-TTT <span class="status-dot status-running ml-2"></span></h3>
+                    <p class="text-gray-400 text-sm">Streaming spatial understanding</p>
+                    <span class="tech-tag bg-blue-500/20 text-blue-400">Running:8006</span>
+                </div>
+                <div class="card rounded-xl p-6">
+                    <h3 class="font-semibold">VMamba</h3>
+                    <p class="text-gray-400 text-sm">State Space Model - LeCun backed</p>
+                    <span class="tech-tag bg-purple-500/20 text-purple-400">Research</span>
+                </div>
+                <div class="card rounded-xl p-6">
+                    <h3 class="font-semibold">TTT-Linear</h3>
+                    <p class="text-gray-400 text-sm">2.7x faster at 128K context</p>
+                    <span class="tech-tag bg-purple-500/20 text-purple-400">Dec 2025</span>
+                </div>
+                <div class="card rounded-xl p-6">
+                    <h3 class="font-semibold">INT8/4-bit Quant</h3>
+                    <p class="text-gray-400 text-sm">Edge compression</p>
+                    <span class="tech-tag bg-green-500/20 text-green-400">Implemented</span>
+                </div>
+                <div class="card rounded-xl p-6">
+                    <h3 class="font-semibold">TTT-Video (1-min)</h3>
+                    <p class="text-gray-400 text-sm">NVIDIA + Stanford, CVPR 2025</p>
+                    <span class="tech-tag bg-blue-500/20 text-blue-400">Research</span>
+                </div>
+                <div class="card rounded-xl p-6">
+                    <h3 class="font-semibold">relay</h3>
+                    <p class="text-gray-400 text-sm">Edge gateway, H3 cells</p>
+                    <span class="tech-tag bg-yellow-500/20 text-yellow-400">Integration</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. World Model: JEPA & Cosmos 🔥 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center"><span class="w-2 h-8 bg-purple-400 mr-3 rounded"></span>3. World Model (JEPA & NVIDIA Cosmos)</h2>
+            <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- PEVA - NEW! -->
+                <div class="card rounded-xl p-6 border-red-500/30 breaking">
+                    <div class="flex justify-between"><h3 class="font-semibold">PEVA</h3><span class="status-dot status-hot"></span></div>
+                    <p class="text-gray-400 text-sm">16-second coherent scene prediction</p>
+                    <span class="tech-tag bg-red-500/20 text-red-400">NEW! Jan 2026</span>
+                    <div class="text-xs text-gray-500 mt-1">Yann LeCun's team</div>
+                </div>
+                <!-- V-JEPA 2 -->
+                <div class="card rounded-xl p-6">
+                    <h3 class="font-semibold">V-JEPA 2</h3>
+                    <p class="text-gray-400 text-sm">State-of-the-art physical reasoning</p>
+                    <span class="tech-tag bg-purple-500/20 text-purple-400">June 2025</span>
+                </div>
+                <!-- Value-Guided JEPA -->
+                <div class="card rounded-xl p-6">
+                    <h3 class="font-semibold">Value-Guided JEPA</h3>
+                    <p class="text-gray-400 text-sm">Action planning + JEPA</p>
+                    <span class="tech-tag bg-purple-500/20 text-purple-400">Jan 2026</span>
+                </div>
+                <!-- NVIDIA Cosmos -->
+                <div class="card rounded-xl p-6 border-green-500/30">
+                    <h3 class="font-semibold text-green-400">NVIDIA Cosmos</h3>
+                    <p class="text-gray-400 text-sm">2M+ downloads, Physical AI standard</p>
+                    <span class="tech-tag bg-green-500/20 text-green-400">Adopted</span>
+                </div>
+                <!-- Cosmos Reason -->
+                <div class="card rounded-xl p-6">
+                    <h3 class="font-semibold">Cosmos Reason</h3>
+                    <p class="text-gray-400 text-sm">7B reasoning model</p>
+                    <span class="tech-tag bg-purple-500/20 text-purple-400">SIGGRAPH 2025</span>
+                </div>
+                <!-- Genie 3 -->
+                <div class="card rounded-xl p-6 border-red-500/30">
+                    <h3 class="font-semibold">Genie 3</h3>
+                    <p class="text-gray-400 text-sm">Google DeepMind - 24fps 3D</p>
+                    <span class="tech-tag bg-red-500/20 text-red-400">HOT! 2026</span>
+                </div>
+                <!-- Marble -->
+                <div class="card rounded-xl p-6 border-red-500/30">
+                    <h3 class="font-semibold">Marble</h3>
+                    <p class="text-gray-400 text-sm">World Labs (Fei-Fei Li)</p>
+                    <span class="tech-tag bg-red-500/20 text-red-400">Commercial</span>
+                </div>
+                <!-- Our VJEPA -->
+                <div class="card rounded-xl p-6">
+                    <h3 class="font-semibold">VJEPA Pipeline</h3>
+                    <p class="text-gray-400 text-sm">Our implementation - 128-dim</p>
+                    <span class="tech-tag bg-cyan-500/20 text-cyan-400">Implemented</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Reasoning -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center"><span class="w-2 h-8 bg-green-400 mr-3 rounded"></span>4. Reasoning (Agent)</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="card rounded-xl p-6"><h3 class="font-semibold">Hermes-Agent</h3><p class="text-gray-400 text-sm">Complete AI Agent framework</p><span class="tech-tag bg-green-500/20 text-green-400">Complete</span></div>
+                <div class="card rounded-xl p-6"><h3 class="font-semibold">World Query API</h3><p class="text-gray-400 text-sm">H3 + pgvector</p><span class="tech-tag bg-yellow-500/20 text-yellow-400">Integration</span></div>
+                <div class="card rounded-xl p-6"><h3 class="font-semibold">Action Planning</h3><p class="text-gray-400 text-sm">Value-guided JEPA</p><span class="tech-tag bg-purple-500/20 text-purple-400">Research</span></div>
+            </div>
+        </section>
+
+        <!-- 5. Simulation -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center"><span class="w-2 h-8 bg-yellow-400 mr-3 rounded"></span>5. Simulation</h2>
+            <div class="grid md:grid-cols-4 gap-4">
+                <div class="card rounded-xl p-6"><h3 class="font-semibold">3D Gaussian</h3><p class="text-gray-400 text-sm">Real-time rendering</p><span class="tech-tag bg-purple-500/20 text-purple-400">Research</span></div>
+                <div class="card rounded-xl p-6"><h3 class="font-semibold">RadSplat</h3><p class="text-gray-400 text-sm">Edge optimization</p><span class="tech-tag bg-purple-500/20 text-purple-400">Research</span></div>
+                <div class="card rounded-xl p-6"><h3 class="font-semibold">Cosmos Transfer</h3><p class="text-gray-400 text-sm">Sim2Real</p><span class="tech-tag bg-green-500/20 text-green-400">Adopted</span></div>
+                <div class="card rounded-xl p-6"><h3 class="font-semibold">CrowdPhysics</h3><p class="text-gray-400 text-sm">Simulation + RN</p><span class="tech-tag bg-green-500/20 text-green-400">Active</span></div>
+            </div>
+        </section>
+
+        <!-- 6. Storage -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6 flex items-center"><span class="w-2 h-8 bg-red-400 mr-3 rounded"></span>6. Storage</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="card rounded-xl p-6"><h3 class="font-semibold">SpaceTimeDB</h3><p class="text-gray-400 text-sm">Time-series + spatial</p><span class="tech-tag bg-yellow-500/20 text-yellow-400">Spec</span></div>
+                <div class="card rounded-xl p-6"><h3 class="font-semibold">pgvector</h3><p class="text-gray-400 text-sm">Semantic search</p><span class="tech-tag bg-yellow-500/20 text-yellow-400">Spec</span></div>
+                <div class="card rounded-xl p-6"><h3 class="font-semibold">H3 Indexing</h3><p class="text-gray-400 text-sm">Hexagonal spatial</p><span class="tech-tag bg-green-500/20 text-green-400">Implemented</span></div>
+            </div>
+        </section>
+
+        <!-- Architecture -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">System Architecture</h2>
+            <div class="card rounded-2xl p-8 text-center">
+                <div class="flex flex-wrap justify-center items-center gap-4">
+                    <div class="bg-cyan-500/20 border border-cyan-500/50 rounded-xl px-6 py-4">📱 Sensors</div>
+                    <div class="text-gray-500">→</div>
+                    <div class="bg-blue-500/20 border border-blue-500/50 rounded-xl px-6 py-4">⚡ Edge (TTT)</div>
+                    <div class="text-gray-500">→</div>
+                    <div class="bg-purple-500/20 border border-purple-500/50 rounded-xl px-6 py-4">🧠 World Model</div>
+                    <div class="text-gray-500">→</div>
+                    <div class="bg-green-500/20 border border-green-500/50 rounded-xl px-6 py-4">🎯 Reasoning</div>
+                    <div class="text-gray-500">→</div>
+                    <div class="bg-yellow-500/20 border border-yellow-500/50 rounded-xl px-6 py-4">🎮 Simulation</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- API -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">API Test</h2>
+            <div class="card rounded-xl p-6">
+                <div class="flex justify-between mb-4"><span class="font-semibold">Spatial-TTT API</span><span class="status-dot status-running"></span></div>
+                <div class="bg-black/30 rounded-lg p-4 font-mono text-sm">
+                    <div class="text-gray-400">curl http://localhost:8006/health</div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 py-8">
+            <p>Oysterworld Physical AI • MECE: Sensors → Edge → World Model → Reasoning → Simulation → Storage</p>
+            <p class="text-sm mt-2">Auto-research daily at 9:00 AM</p>
+        </footer>
+    </div>
+</body>
+</html>
