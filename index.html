@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical AI Matrix - Industry Intelligence</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        h1 {
+            font-size: 3rem;
+            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        .subtitle { color: #888; font-size: 1.2rem; }
+        .last-updated {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,212,255,0.2);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+        .company-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #00d4ff;
+        }
+        .funding {
+            background: rgba(0,212,255,0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #00d4ff;
+        }
+        .investors {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .description {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+        .tag {
+            display: inline-block;
+            background: rgba(123,43,191,0.3);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem;
+            color: #fff;
+            border-left: 4px solid #00d4ff;
+            padding-left: 1rem;
+        }
+        .threat-level {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .threat-high { background: rgba(255,71,87,0.3); color: #ff4757; }
+        .threat-medium { background: rgba(255,165,2,0.3); color: #ffa502; }
+        .threat-low { background: rgba(46,213,115,0.3); color: #2ed573; }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .stat-box {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00d4ff;
+        }
+        .stat-label {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 3rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Physical AI Matrix</h1>
+            <p class="subtitle">Real-time intelligence on the Physical AI landscape</p>
+            <p class="last-updated">Last updated: June 09, 2026 at 20:00 UTC</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number">10</div>
+                <div class="stat-label">Companies Tracked</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">$3.2B+</div>
+                <div class="stat-label">Total Funding</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Threats Monitored</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Tech Breakthroughs</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">🔥 Latest Research - June 2026</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="company-name">AMI Labs — World Models</div>
+                    <div class="funding">$1.03B Seed</div>
+                </div>
+                <div class="investors">Yann LeCun, world-model thesis</div>
+                <div class="description">Signals a market shift from pure LLMs to JEPA-style world models for physical reasoning and planning.</div>
+                <span class="tag">World Models</span>
+                <span class="tag">JEPA</span>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="company-name">NVIDIA Cosmos 3 + Jetson Thor</div>
+                    <div class="funding">Edge AI Infrastructure</div>
+                </div>
+                <div class="investors">NVIDIA Physical AI stack</div>
+                <div class="description">Cosmos 3 pushes omnimodal world models; Jetson AGX Thor brings Blackwell-class compute to humanoid robots.</div>
+                <span class="tag">Omnimodal</span>
+                <span class="tag">Edge AI</span>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="company-name">World Labs Marble / World API</div>
+                    <div class="funding">Spatial Intelligence</div>
+                </div>
+                <div class="investors">Fei-Fei Li-led spatial AI</div>
+                <div class="description">Marble generates persistent, navigable 3D worlds from text, images, and video; World API exposes it as infrastructure.</div>
+                <span class="tag">3D Worlds</span>
+                <span class="tag">Spatial AI</span>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="company-name">Memories.ai + TwelveLabs</div>
+                    <div class="funding">Visual Memory Layer</div>
+                </div>
+                <div class="investors">LVMM + Marengo/Pegasus</div>
+                <div class="description">Video is becoming searchable long-term memory: key competitive surface for Oyster's distributed sensing and spatial recall.</div>
+                <span class="tag">Visual Memory</span>
+                <span class="tag">Video AI</span>
+            </div>
+        </div>
+
+        <h2 class="section-title">🏢 Key Companies</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="company-name">Physical Intelligence (Pi)</div>
+                    <div class="funding">\$600M Series B</div>
+                </div>
+                <div class="investors">CapitalG, Lux, Bezos, Sequoia, Redpoint</div>
+                <div class="description">Building a universal robot brain for general-purpose physical work. Highest-priority software watch target.</div>
+                <span class="tag">Robot Foundation Model</span>
+                <span class="tag">Score 5</span>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="company-name">Skild AI</div>
+                    <div class="funding">\$1.4B Series C</div>
+                </div>
+                <div class="investors">SoftBank-led</div>
+                <div class="description">Omni-bodied intelligence platform scaling across robot bodies, data sources, and foundation models.</div>
+                <span class="tag">Omni-bodied AI</span>
+                <span class="tag">Score 5</span>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="company-name">Figure AI</div>
+                    <div class="funding">\$1B+ Series C</div>
+                </div>
+                <div class="investors">$39B post-money valuation</div>
+                <div class="description">Humanoid commercialization benchmark; proving capital markets are pricing general-purpose robots seriously.</div>
+                <span class="tag">Humanoid</span>
+                <span class="tag">Score 5</span>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="company-name">General Intuition</div>
+                    <div class="funding">\$133.7M Seed</div>
+                </div>
+                <div class="investors">Khosla, General Catalyst, Raine</div>
+                <div class="description">Uses video-game clips to train spatial-temporal agents that can navigate unfamiliar physical environments.</div>
+                <span class="tag">Spatial Intelligence</span>
+                <span class="tag">Score 5</span>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="company-name">Memories.ai</div>
+                    <div class="funding">\$16M reported</div>
+                </div>
+                <div class="investors">Susa-led reported; Qualcomm/Samsung named on site</div>
+                <div class="description">Large Visual Memory Model for enterprise video intelligence and on-device visual memory workflows.</div>
+                <span class="tag">Visual Memory</span>
+                <span class="tag">Score 4</span>
+            </div>
+        </div>
+
+        <h2 class="section-title">👁️ Competitor Threat Assessment</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="company-name">Memories.ai</div>
+                    <span class="threat-level threat-high">HIGH THREAT</span>
+                </div>
+                <div class="description">Visual memory layer for wearables/robots; Project LUCI points to zero-cloud-latency indexing.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="company-name">TwelveLabs</div>
+                    <span class="threat-level threat-high">HIGH THREAT</span>
+                </div>
+                <div class="description">Marengo/Pegasus make video search, summarization, and video-to-text APIs production-grade.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="company-name">General Intuition</div>
+                    <span class="threat-level threat-high">HIGH THREAT</span>
+                </div>
+                <div class="description">Spatial-temporal reasoning from gaming/video data could shortcut sim-to-real training.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="company-name">Rerun</div>
+                    <span class="threat-level threat-medium">MEDIUM THREAT</span>
+                </div>
+                <div class="description">Data layer for Physical AI telemetry; could become default logging stack for robot/drone/car teams.</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">🔬 Technology Breakthroughs</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="company-name">World Models</div>
+                <div class="description">AMI Labs, NVIDIA Cosmos 3, Genie 3, and Marble are converging on interactive, physics-aware world generation.</div>
+            </div>
+
+            <div class="card">
+                <div class="company-name">Spatial Intelligence</div>
+                <div class="description">General Intuition and World Labs turn video/game/3D data into spatial-temporal reasoning and navigable worlds.</div>
+            </div>
+
+            <div class="card">
+                <div class="company-name">Edge AI</div>
+                <div class="description">Jetson Thor and Project LUCI show why Physical AI needs local inference, memory, and planning close to sensors.</div>
+            </div>
+
+            <div class="card">
+                <div class="company-name">Distributed Sensing (Oyster Advantage)</div>
+                <div class="description">Consumer devices become Physical AI data endpoints: visual memory, spatial recall, and edge telemetry at scale.</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">💡 Strategic Recommendations</h2>
+        <div class="card" style="margin-top: 1rem;">
+            <ol style="color: #aaa; margin-left: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;"><strong style="color: #fff;">Track robot foundation-model funding</strong> — Pi, Skild, and Figure define the commercialization bar.</li>
+                <li style="margin-bottom: 0.5rem;"><strong style="color: #fff;">Benchmark visual memory</strong> — Memories.ai and TwelveLabs are direct references for searchable long-term video memory.</li>
+                <li style="margin-bottom: 0.5rem;"><strong style="color: #fff;">Build spatial recall demos</strong> — General Intuition and World Labs make spatial-temporal reasoning the new differentiator.</li>
+                <li><strong style="color: #fff;">Move inference to the edge</strong> — Jetson Thor and on-device LUCI show the market is optimizing for latency, privacy, and robot autonomy.</li>
+            </ol>
+        </div>
+
+        <footer>
+            <p>Generated by Hermes Physical AI Research Agent</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">Oyster Labs Intelligence • Updated automatically 2x daily</p>
+        </footer>
+    </div>
+</body>
+</html>

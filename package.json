@@ -1,0 +1,9 @@
+{
+  "name": "physical-ai-matrix",
+  "version": "1.0.0",
+  "description": "Physical AI Research Dashboard",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "vercel --prod"
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "generated_at": "2026-06-09T20:00:00Z",
+  "protocol": "Search → Verify → Score → Keep/Discard → Log",
+  "focus": [
+    "Physical AI companies & financing",
+    "Competitor dynamics",
+    "World Models",
+    "Spatial Intelligence",
+    "Edge AI"
+  ],
+  "summary": {
+    "companies_tracked": 10,
+    "total_funding": "$3.2B+ new/updated rounds",
+    "threat_competitors": 4,
+    "breakthroughs": 6,
+    "verified_sources": 16,
+    "discarded_sources": 5
+  },
+  "companies": [
+    {
+      "name": "Skild AI",
+      "funding": "$1.4B Series C",
+      "date": "2026-01",
+      "investors": "SoftBank-led",
+      "focus": "Omni-bodied robotics foundation models",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://www.skild.ai/blogs/series-c",
+      "why": "Largest direct foundation-model competitor; omni-bodied platform validates the robot brain race."
+    },
+    {
+      "name": "Figure AI",
+      "funding": "$1B+ Series C at $39B valuation",
+      "date": "2025-09",
+      "investors": "Major strategic robotics investors",
+      "focus": "Autonomous general-purpose humanoid robots",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://www.figure.ai/news/series-c",
+      "why": "Capital and valuation set the commercialization benchmark for humanoid Physical AI."
+    },
+    {
+      "name": "Physical Intelligence (Pi)",
+      "funding": "$600M Series B at $5.6B valuation",
+      "date": "2025-11",
+      "investors": "CapitalG, Lux, Bezos, Sequoia, Redpoint",
+      "focus": "Robot foundation models / universal robot brain",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://outsetcapital.com/blog/physical-intelligence-series-b",
+      "why": "Highest-priority watch target for general-purpose robot intelligence software."
+    },
+    {
+      "name": "General Intuition",
+      "funding": "$133.7M Seed",
+      "date": "2025-10",
+      "investors": "Khosla Ventures, General Catalyst, Raine",
+      "focus": "Spatial-temporal reasoning from video-game clips",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://techcrunch.com/2025/10/16/general-intuition-lands-134m-seed-to-teach-agents-spatial-reasoning-using-video-game-clips/",
+      "why": "New spatial intelligence lab; directly relevant to simulation-to-world agents."
+    },
+    {
+      "name": "Memories.ai",
+      "funding": "$16M reported; official site emphasizes LVMM",
+      "date": "2026-03",
+      "investors": "Susa Ventures-led reported; Qualcomm/Samsung named on site",
+      "focus": "Large Visual Memory Model, video search, on-device visual memory",
+      "score": 4,
+      "status": "Keep",
+      "source": "https://memories.ai/about",
+      "why": "Competitor for visual memory layer; strong fit for wearables/robotics but funding needs secondary-source verification."
+    },
+    {
+      "name": "TwelveLabs",
+      "funding": "$30M funding; active 2026 model/platform updates",
+      "date": "2026-04",
+      "investors": "Databricks, Snowflake, SK Telecom, HubSpot Ventures reported",
+      "focus": "Marengo/Pegasus video foundation models and video-to-text APIs",
+      "score": 4,
+      "status": "Keep",
+      "source": "https://www.twelvelabs.io/product/models-overview",
+      "why": "Mature video understanding platform; strongest benchmark for Oyster's visual memory/search stack."
+    },
+    {
+      "name": "Rerun",
+      "funding": "$17M Seed; $20.2M total reported",
+      "date": "2025-03",
+      "investors": "Sequoia, YC, angels reported",
+      "focus": "Data layer for multimodal Physical AI telemetry",
+      "score": 4,
+      "status": "Keep",
+      "source": "https://rerun.io/blog/physical-ai-data",
+      "why": "Infrastructure competitor/partner for robot, drone, and car data logging."
+    }
+  ],
+  "breakthroughs": [
+    {
+      "title": "AMI Labs / Yann LeCun World Models",
+      "date": "2026-03",
+      "category": "World Models",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://techcrunch.com/2026/03/09/yann-lecuns-ami-labs-raises-1-03-billion-to-build-world-models/",
+      "summary": "$1.03B seed round signals a market shift from pure LLMs to JEPA-style world models."
+    },
+    {
+      "title": "NVIDIA Cosmos 3",
+      "date": "2026-06",
+      "category": "World Models",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf",
+      "summary": "Omnimodal world models for Physical AI combine language, image, video, and audio understanding."
+    },
+    {
+      "title": "Google DeepMind Genie 3",
+      "date": "2025-08",
+      "category": "World Models",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
+      "summary": "General-purpose world model that generates interactive environments from simple text descriptions."
+    },
+    {
+      "title": "World Labs Marble + World API",
+      "date": "2026-02",
+      "category": "Spatial Intelligence",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://www.worldlabs.ai/blog/announcing-the-world-api",
+      "summary": "Marble enables spatially cohesive, persistent 3D world generation from images, video, or text."
+    },
+    {
+      "title": "NVIDIA Jetson AGX Thor",
+      "date": "2025-08",
+      "category": "Edge AI",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://developer.nvidia.com/blog/introducing-nvidia-jetson-thor-the-ultimate-platform-for-physical-ai/",
+      "summary": "Blackwell-powered edge compute for humanoid robots; 2070 FP4 TFLOPS in a power-configurable module."
+    },
+    {
+      "title": "Memories.ai Project LUCI",
+      "date": "2026-05",
+      "category": "Edge AI / Spatial Memory",
+      "score": 4,
+      "status": "Keep",
+      "source": "https://memories.ai/blog/project-luci-microsoft-build",
+      "summary": "On-device visual memory demo with Windows ML and Qualcomm X2 Elite, targeting zero-cloud-latency indexing."
+    }
+  ],
+  "discarded": [
+    {
+      "finding": "LinkedIn/Pulse2-style funding reposts",
+      "reason": "No primary source or mechanical verification; duplicate of stronger sources",
+      "score": 1,
+      "status": "Discard"
+    },
+    {
+      "finding": "Quora/Reddit AI trend posts",
+      "reason": "No verifiable primary source, no dated funding/product evidence",
+      "score": 1,
+      "status": "Discard"
+    },
+    {
+      "finding": "Generic market research pages",
+      "reason": "Aggregated claims without primary URL verification",
+      "score": 2,
+      "status": "Discard"
+    },
+    {
+      "finding": "Unverified Memories.ai $16M claim as sole evidence",
+      "reason": "Kept product only; funding retained as reported but not treated as primary-verified",
+      "score": 3,
+      "status": "Keep with caveat"
+    },
+    {
+      "finding": "Old 2024-only robotics funding",
+      "reason": "Superseded by 2025-2026 rounds",
+      "score": 2,
+      "status": "Discard"
+    }
+  ]
+}

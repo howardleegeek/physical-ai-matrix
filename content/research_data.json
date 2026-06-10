@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-06-09T20:00:00Z",
+  "protocol": "Search → Verify → Score → Keep/Discard → Log",
+  "market_data": {
+    "cagr": "38.2%",
+    "market_size_2024": "$12.8B",
+    "projected_2030": "$89.5B",
+    "tracked_funding_2025_2026": "$3.2B+ across Skild, Figure, Physical Intelligence, General Intuition, Memories.ai, TwelveLabs, Rerun"
+  },
+  "recent_developments": [
+    {
+      "date": "2026-06",
+      "description": "NVIDIA Cosmos 3 technical report frames omnimodal world models as a Physical AI substrate across language, image, video, and audio.",
+      "title": "NVIDIA Cosmos 3"
+    },
+    {
+      "date": "2026-03",
+      "description": "Yann LeCun's AMI Labs raised $1.03B to build world models, accelerating the JEPA/world-model narrative beyond LLM scaling.",
+      "title": "AMI Labs World Models"
+    },
+    {
+      "date": "2026-02",
+      "description": "World Labs expanded Marble with a World API for generating explorable 3D worlds from text, images, and video.",
+      "title": "World Labs World API"
+    },
+    {
+      "date": "2026-01",
+      "description": "Skild AI raised a $1.4B Series C led by SoftBank for omni-bodied intelligence.",
+      "title": "Skild AI Series C"
+    },
+    {
+      "date": "2025-11",
+      "description": "Physical Intelligence raised $600M at a $5.6B valuation for universal robot-brain software.",
+      "title": "Physical Intelligence Series B"
+    },
+    {
+      "date": "2025-10",
+      "description": "General Intuition raised $133.7M to train spatial-temporal agents from gaming and video data.",
+      "title": "General Intuition Seed"
+    },
+    {
+      "date": "2025-09",
+      "description": "Figure AI exceeded $1B in Series C funding at a $39B valuation for autonomous general-purpose humanoid robots.",
+      "title": "Figure AI Series C"
+    }
+  ],
+  "topics": [
+    {
+      "description": "AI systems that perceive, reason, and act in the physical world through robots, edge devices, and spatial interfaces.",
+      "key_companies": ["Skild AI", "Figure AI", "Physical Intelligence", "General Intuition", "World Labs", "NVIDIA"],
+      "name": "Physical AI",
+      "trends": ["Robot foundation models", "Omni-bodied intelligence", "Humanoid commercialization", "Spatial intelligence"]
+    },
+    {
+      "description": "AI agents with persistent visual and spatial memory across wearables, robotics, and distributed sensor networks.",
+      "key_companies": ["Memories.ai", "TwelveLabs", "Rerun", "World Labs"],
+      "name": "Spatial & Visual Memory",
+      "trends": ["Large Visual Memory Models", "Video-to-text APIs", "On-device indexing", "Multimodal data logging"]
+    },
+    {
+      "description": "World models that simulate or generate interactive environments for training, planning, and sim-to-real transfer.",
+      "key_companies": ["AMI Labs", "NVIDIA Cosmos", "Google DeepMind", "World Labs"],
+      "name": "World Models",
+      "trends": ["JEPA", "Omnimodal world models", "Interactive 3D generation", "Physics-consistent simulation"]
+    },
+    {
+      "description": "Edge AI hardware and software that moves perception, planning, and memory closer to robots and wearables.",
+      "key_companies": ["NVIDIA Jetson Thor", "Qualcomm Dragonwing", "Memories.ai"],
+      "name": "Edge AI",
+      "trends": ["On-device AI", "Humanoid compute modules", "Zero-cloud-latency indexing", "Robot edge orchestration"]
+    }
+  ]
+}
