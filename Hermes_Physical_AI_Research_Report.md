@@ -1,13 +1,15 @@
 Hermes Physical AI Research Report
 
 Summary:
-- Hermes updated the website at /Users/howardli/Downloads/physical-ai-matrix/ and deployed to Vercel. The live Techtree page is available at:
-  https://physical-ai-matrix.vercel.app/techtree.html
+- Hermes updated the website at /Users/howardli/Downloads/physical-ai-matrix/ and pushed the latest commit to GitHub main.
+- Vercel production deployment could not be verified: the Vercel CLI has no valid credentials in this environment, and the live production URL still serves the previous build.
+- The live Techtree page currently returns 404; the root URL is reachable but still shows stale content.
 
 Report details:
 - Script: /Users/howardli/Downloads/hermes-agent/cron/research_physical_ai.py
 - Website updated: successful
-- Deployment to Vercel: successful (live URL above)
+- GitHub main: updated and pushed
+- Deployment to Vercel: not verified / blocked by missing valid Vercel credentials
 - NotebookLM integration: attempted, but the NotebookLM API returned a 400 Bad Request during notebook creation. A local Markdown report has been generated as fallback
 
 NotebookLM fallback:

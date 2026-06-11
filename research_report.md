@@ -2,7 +2,8 @@
 
 **生成时间**: 2026-06-09 20:00 UTC  
 **执行模式**: Search → Verify → Score → Keep/Discard → Log  
-**网站**: https://physical-ai-matrix.vercel.app/techtree.html
+**网站**: https://physical-ai-matrix.vercel.app/  
+**部署状态**: 本地站点已更新，GitHub main 已推送；Vercel 生产部署未验证（当前环境缺少有效 Vercel 凭据，生产 URL 仍为旧版本，/techtree.html 返回 404）。
 
 ## 1. 结论摘要
 
