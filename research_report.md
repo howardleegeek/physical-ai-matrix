@@ -1,43 +1,35 @@
-# Physical AI Research Report — 2026-06-09
+# Physical AI Research Report — 2026-06-12
 
-**生成时间**: 2026-06-09 20:00 UTC  
+**生成时间**: 2026-06-12T15:11:24Z  
 **执行模式**: Search → Verify → Score → Keep/Discard → Log  
 **网站**: https://physical-ai-matrix.vercel.app/  
-**部署状态**: 本地站点已更新，GitHub main 已推送；Vercel 生产部署未验证（当前环境缺少有效 Vercel 凭据，生产 URL 仍为旧版本，/techtree.html 返回 404）。
+**部署状态**: 本地站点已更新；Vercel 生产部署已完成并验证可访问。
 
 ## 1. 结论摘要
 
-- **融资继续向 Physical AI 头部集中**：Skild AI 的 $1.4B Series C、Figure AI 的 $1B+ Series C、Physical Intelligence 的 $600M Series B 说明机器人基础模型和通用人形机器人正在进入“资本 + 产品化”阶段。
-- **竞品重点从“视频理解”扩展到“空间记忆 + 世界模型”**：Memories.ai、TwelveLabs、Rerun、General Intuition 分别卡位视觉记忆、视频基础模型、物理 AI 数据层、空间时序推理。
-- **World Models 成为 2026 主线**：AMI Labs、NVIDIA Cosmos 3、Google Genie 3、World Labs Marble/World API 共同指向“可生成、可交互、物理一致”的世界模型。
-- **Edge AI 是 Physical AI 落地关键**：NVIDIA Jetson AGX Thor 和 Memories.ai Project LUCI 显示机器人/眼镜端正在把感知、记忆和推理前移到设备侧。
+- **NEURA Robotics 成为本轮最大增量信号**：Tether 官方新闻稿验证其 Series C 最高可达 $1.4B，投资者/合作方包括 Amazon、NVIDIA、EIB 等，说明人形机器人与“机器人金融/智能基础设施”正在被资本市场同时定价。
+- **融资继续向 Physical AI 头部集中**：Skild AI、Figure AI、Physical Intelligence、General Intuition 与 NEURA Robotics 共同显示机器人基础模型、通用人形机器人和空间智能进入资本加速期。
+- **竞品动态聚焦视觉记忆与空间智能**：Memories.ai 从视频理解切入 wearable/robotics visual memory；TwelveLabs 继续强化 Marengo/Pegasus 视频基础模型；Rerun 卡位多模态遥测数据层；General Intuition 用游戏/视频数据训练空间时序智能体。
+- **技术主线仍是 World Models + Spatial Intelligence + Edge AI**：NVIDIA Cosmos 3、Google DeepMind Genie 3、World Labs World API、Jetson AGX Thor 共同指向“可生成、可交互、可部署”的物理世界智能栈。
 
-## 2. 重点融资与公司
+## 2. 本轮新增/更新重点
 
-| 公司 | 更新 | 分数 | 结论 |
+| 条目 | 更新 | 分数 | 结论 |
 |---|---:|---:|---|
-| Skild AI | $1.4B Series C，SoftBank 领投 | 5 | Omni-bodied 基础模型直接竞争，优先级最高之一 |
-| Figure AI | $1B+ Series C，$39B 估值 | 5 | 人形机器人商业化标杆 |
-| Physical Intelligence | $600M Series B，$5.6B 估值 | 5 | “通用机器人脑”软件层核心标的 |
-| General Intuition | $133.7M Seed | 5 | 用游戏/视频数据训练空间时序智能体，和 Oyster 空间智能方向高度相关 |
-| Memories.ai | $16M 融资为媒体报道；官方站强调 LVMM、Qualcomm/Samsung | 4 | 视觉记忆层竞品，融资需二级来源标注 |
-| TwelveLabs | $30M 融资 + 2026 Marengo/Pegasus 产品更新 | 4 | 视频理解成熟平台，适合作为 Oyster 视频记忆 benchmark |
-| Rerun | $17M Seed | 4 | 物理 AI 数据层/遥测基础设施，可合作也可竞争 |
+| NEURA Robotics | up to $1.4B Series C，Tether-led | 5 | 本轮最重要新增融资；人形机器人与机器人金融/智能基础设施信号 |
+| NVIDIA Cosmos 3 | 2026-06 技术报告验证 omnimodal world models | 5 | World Models 从叙事进入可工程化框架 |
+| Google DeepMind Genie 3 | 官方模型页验证 interactive world model | 5 | 世界模型产品化路径更清晰 |
+| World Labs World API | 官方 API 发布，支持从 text/image/video 生成可探索 3D worlds | 5 | Spatial Intelligence 基础设施化 |
+| Memories.ai | TechCrunch + 官方页验证 wearable/robotics visual memory 定位 | 4 | Oyster 视觉记忆层核心竞品 |
+| TwelveLabs | 官方产品页验证 Marengo/Pegasus 视频基础模型 | 4 | 视频检索/理解 benchmark 继续提高 |
 
-## 3. 技术突破
+## 3. 对 Oyster 的启示
 
-1. **World Models**：AMI Labs $1.03B seed 将 JEPA/世界模型叙事推到主流；NVIDIA Cosmos 3 进一步把语言、图像、视频、音频纳入统一世界模型框架。
-2. **Spatial Intelligence**：World Labs Marble/World API 支持从图像、视频、文本生成可探索 3D 世界；General Intuition 用游戏 clip 训练空间时序推理。
-3. **Edge AI**：NVIDIA Jetson AGX Thor 提供 Blackwell 人形机器人算力；Memories.ai Project LUCI 展示 Windows ML + Qualcomm X2 Elite 的端侧视觉索引。
-4. **Video Understanding**：TwelveLabs Marengo/Pegasus 和 Memories.ai LVMM 都在把视频变成可搜索、可推理、可长期记忆的语义层。
-
-## 4. 对 Oyster 的启示
-
-- **产品叙事**：Oyster 应强调“分布式传感器 + 空间记忆 + 边缘推理”的差异，而不是只做通用视频理解。
-- **技术路线**：优先验证本地/端侧视觉索引、空间记忆检索、世界模型辅助规划三条线。
-- **竞品监测**：Skild AI、Physical Intelligence、General Intuition、Memories.ai 进入高频跟踪；TwelveLabs/Rerun 作为平台能力 benchmark。
+- **差异化叙事**：不要只做“视频理解”，应强调“分布式传感器 + 空间记忆 + 边缘推理 + 世界模型辅助规划”。
+- **竞品监测优先级**：NEURA Robotics、Skild AI、Physical Intelligence、General Intuition、Memories.ai 进入高频跟踪；TwelveLabs/Rerun 作为平台能力 benchmark。
+- **技术路线**：优先验证本地视觉索引、空间记忆检索、机器人/穿戴设备端推理、以及世界模型辅助规划四条线。
 - **数据优势**：继续把 ClawGlasses/ClawPhones/环境传感器作为 Physical AI 数据飞轮，而非单纯内容产品。
 
-## 5. 验证与保留规则
+## 4. 验证与保留规则
 
-本轮只保留满足机械验证的条目：URL 可达、页面关键词命中、主题与 Physical AI 相关、分数 ≥3。低质量聚合页、社媒转载、无原始来源的融资帖已丢弃。完整日志已写入 `research_log_2026-06-09.tsv`。
+本轮只保留满足机械验证的条目：URL 可达、页面关键词命中、主题与 Physical AI 相关、分数 ≥3。低质量聚合页、社媒转载、无原始来源的融资帖已丢弃。完整日志已写入 `research_log_2026-06-12.tsv`。

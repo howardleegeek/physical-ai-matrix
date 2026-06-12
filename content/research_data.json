@@ -1,13 +1,18 @@
 {
-  "generated_at": "2026-06-09T20:00:00Z",
+  "generated_at": "2026-06-12T15:11:24Z",
   "protocol": "Search → Verify → Score → Keep/Discard → Log",
   "market_data": {
     "cagr": "38.2%",
     "market_size_2024": "$12.8B",
     "projected_2030": "$89.5B",
-    "tracked_funding_2025_2026": "$3.2B+ across Skild, Figure, Physical Intelligence, General Intuition, Memories.ai, TwelveLabs, Rerun"
+    "tracked_funding_2025_2026": "$4.6B+ across Skild, Figure, Physical Intelligence, NEURA Robotics, General Intuition, Memories.ai, TwelveLabs, Rerun"
   },
   "recent_developments": [
+    {
+      "date": "2026-06",
+      "description": "NEURA Robotics announced up to $1.4B in Series C financing led by Tether, making it one of the largest humanoid robotics and Physical AI rounds.",
+      "title": "NEURA Robotics Series C"
+    },
     {
       "date": "2026-06",
       "description": "NVIDIA Cosmos 3 technical report frames omnimodal world models as a Physical AI substrate across language, image, video, and audio.",
@@ -47,27 +52,70 @@
   "topics": [
     {
       "description": "AI systems that perceive, reason, and act in the physical world through robots, edge devices, and spatial interfaces.",
-      "key_companies": ["Skild AI", "Figure AI", "Physical Intelligence", "General Intuition", "World Labs", "NVIDIA"],
+      "key_companies": [
+        "NEURA Robotics",
+        "Skild AI",
+        "Figure AI",
+        "Physical Intelligence",
+        "General Intuition",
+        "World Labs",
+        "NVIDIA"
+      ],
       "name": "Physical AI",
-      "trends": ["Robot foundation models", "Omni-bodied intelligence", "Humanoid commercialization", "Spatial intelligence"]
+      "trends": [
+        "Robot foundation models",
+        "Omni-bodied intelligence",
+        "Humanoid commercialization",
+        "Spatial intelligence"
+      ]
     },
     {
       "description": "AI agents with persistent visual and spatial memory across wearables, robotics, and distributed sensor networks.",
-      "key_companies": ["Memories.ai", "TwelveLabs", "Rerun", "World Labs"],
+      "key_companies": [
+        "Memories.ai",
+        "TwelveLabs",
+        "Rerun",
+        "World Labs"
+      ],
       "name": "Spatial & Visual Memory",
-      "trends": ["Large Visual Memory Models", "Video-to-text APIs", "On-device indexing", "Multimodal data logging"]
+      "trends": [
+        "Large Visual Memory Models",
+        "Video-to-text APIs",
+        "On-device indexing",
+        "Multimodal data logging",
+        "TwelveLabs Marengo/Pegasus"
+      ]
     },
     {
       "description": "World models that simulate or generate interactive environments for training, planning, and sim-to-real transfer.",
-      "key_companies": ["AMI Labs", "NVIDIA Cosmos", "Google DeepMind", "World Labs"],
+      "key_companies": [
+        "AMI Labs",
+        "NVIDIA Cosmos",
+        "Google DeepMind",
+        "World Labs"
+      ],
       "name": "World Models",
-      "trends": ["JEPA", "Omnimodal world models", "Interactive 3D generation", "Physics-consistent simulation"]
+      "trends": [
+        "JEPA",
+        "Omnimodal world models",
+        "Interactive 3D generation",
+        "Physics-consistent simulation"
+      ]
     },
     {
       "description": "Edge AI hardware and software that moves perception, planning, and memory closer to robots and wearables.",
-      "key_companies": ["NVIDIA Jetson Thor", "Qualcomm Dragonwing", "Memories.ai"],
+      "key_companies": [
+        "NVIDIA Jetson Thor",
+        "Qualcomm Dragonwing",
+        "Memories.ai"
+      ],
       "name": "Edge AI",
-      "trends": ["On-device AI", "Humanoid compute modules", "Zero-cloud-latency indexing", "Robot edge orchestration"]
+      "trends": [
+        "On-device AI",
+        "Humanoid compute modules",
+        "Zero-cloud-latency indexing",
+        "Robot edge orchestration"
+      ]
     }
   ]
 }

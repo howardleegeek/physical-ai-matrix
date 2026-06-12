@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T20:00:00Z",
+  "generated_at": "2026-06-12T15:11:24Z",
   "protocol": "Search → Verify → Score → Keep/Discard → Log",
   "focus": [
     "Physical AI companies & financing",
@@ -9,14 +9,25 @@
     "Edge AI"
   ],
   "summary": {
-    "companies_tracked": 10,
-    "total_funding": "$3.2B+ new/updated rounds",
+    "companies_tracked": 8,
+    "total_funding": "$4.6B+ new/updated rounds",
     "threat_competitors": 4,
-    "breakthroughs": 6,
-    "verified_sources": 16,
+    "breakthroughs": 12,
+    "verified_sources": 18,
     "discarded_sources": 5
   },
   "companies": [
+    {
+      "name": "NEURA Robotics",
+      "funding": "up to $1.4B Series C",
+      "date": "2026-06",
+      "investors": "Tether-led; Amazon, NVIDIA, European Investment Bank reported/strategic",
+      "focus": "Humanoid robotics platform plus financial and intelligence layer",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://tether.io/news/tether-to-lead-neura-robotics-series-c-financing-one-of-the-largest-up-to-1-4bn-robotics-physical-ai-investment-rounds-on-record-to-power-the-financial-and-intelligence-layer/",
+      "why": "Largest June 2026 robotics/Physical AI financing signal; validates humanoid deployment plus robot financial infrastructure as a major market axis."
+    },
     {
       "name": "Skild AI",
       "funding": "$1.4B Series C",
@@ -69,8 +80,8 @@
       "focus": "Large Visual Memory Model, video search, on-device visual memory",
       "score": 4,
       "status": "Keep",
-      "source": "https://memories.ai/about",
-      "why": "Competitor for visual memory layer; strong fit for wearables/robotics but funding needs secondary-source verification."
+      "source": "https://techcrunch.com/2026/03/16/memories-ai-is-building-the-visual-memory-layer-for-wearables-and-robotics/",
+      "why": "TechCrunch and official product pages verify visual-memory positioning for wearables/robotics; funding remains a reported/secondary-source item."
     },
     {
       "name": "TwelveLabs",
@@ -97,6 +108,78 @@
   ],
   "breakthroughs": [
     {
+      "title": "NVIDIA Cosmos 3 technical report",
+      "date": "2026-06",
+      "category": "World Models",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://research.nvidia.com/labs/cosmos-lab/cosmos3/technical-report.pdf",
+      "summary": "Omnimodal world models for Physical AI process and generate language, image, video, and audio together."
+    },
+    {
+      "title": "Google DeepMind Genie 3",
+      "date": "2025-08",
+      "category": "World Models",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
+      "summary": "General-purpose world model that generates interactive environments from simple text descriptions."
+    },
+    {
+      "title": "Google DeepMind Genie 3",
+      "date": "2025-08",
+      "category": "World Models",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://deepmind.google/models/genie/",
+      "summary": "Interactive world model surface that can generate explorable environments from simple text prompts."
+    },
+    {
+      "title": "World Labs World API",
+      "date": "2026-01",
+      "category": "Spatial Intelligence",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://www.worldlabs.ai/blog/announcing-the-world-api",
+      "summary": "API for generating explorable 3D worlds from text, images, and video, moving Marble from demo to infrastructure."
+    },
+    {
+      "title": "NVIDIA Jetson AGX Thor",
+      "date": "2025-08",
+      "category": "Edge AI",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://developer.nvidia.com/blog/introducing-nvidia-jetson-thor-the-ultimate-platform-for-physical-ai/",
+      "summary": "Blackwell-powered edge compute for humanoid robots; 2070 FP4 TFLOPS in a power-configurable module."
+    },
+    {
+      "title": "NVIDIA Jetson AGX Thor",
+      "date": "2026-06",
+      "category": "Edge AI",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-thor/",
+      "summary": "Blackwell-based edge compute for Physical Robotics, including 2070 TFLOPS FP4 sparse performance for humanoid robots."
+    },
+    {
+      "title": "Memories.ai visual memory for wearables and robotics",
+      "date": "2026-03",
+      "category": "Spatial Memory / Edge AI",
+      "score": 4,
+      "status": "Keep",
+      "source": "https://techcrunch.com/2026/03/16/memories-ai-is-building-the-visual-memory-layer-for-wearables-and-robotics/",
+      "summary": "Visual memory layer for wearable and robot recall; funding should be treated as reported unless corroborated by an official financing page."
+    },
+    {
+      "title": "TwelveLabs Marengo and Pegasus",
+      "date": "2026-06",
+      "category": "Video Understanding",
+      "score": 4,
+      "status": "Keep",
+      "source": "https://www.twelvelabs.io/product/models-overview/",
+      "summary": "Production video foundation models for multimodal retrieval, embeddings, and video-language reasoning."
+    },
+    {
       "title": "AMI Labs / Yann LeCun World Models",
       "date": "2026-03",
       "category": "World Models",
@@ -115,15 +198,6 @@
       "summary": "Omnimodal world models for Physical AI combine language, image, video, and audio understanding."
     },
     {
-      "title": "Google DeepMind Genie 3",
-      "date": "2025-08",
-      "category": "World Models",
-      "score": 5,
-      "status": "Keep",
-      "source": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
-      "summary": "General-purpose world model that generates interactive environments from simple text descriptions."
-    },
-    {
       "title": "World Labs Marble + World API",
       "date": "2026-02",
       "category": "Spatial Intelligence",
@@ -131,15 +205,6 @@
       "status": "Keep",
       "source": "https://www.worldlabs.ai/blog/announcing-the-world-api",
       "summary": "Marble enables spatially cohesive, persistent 3D world generation from images, video, or text."
-    },
-    {
-      "title": "NVIDIA Jetson AGX Thor",
-      "date": "2025-08",
-      "category": "Edge AI",
-      "score": 5,
-      "status": "Keep",
-      "source": "https://developer.nvidia.com/blog/introducing-nvidia-jetson-thor-the-ultimate-platform-for-physical-ai/",
-      "summary": "Blackwell-powered edge compute for humanoid robots; 2070 FP4 TFLOPS in a power-configurable module."
     },
     {
       "title": "Memories.ai Project LUCI",
