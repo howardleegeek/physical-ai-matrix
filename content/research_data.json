@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T03:10:17Z",
+  "generated_at": "2026-06-18T15:05:29Z",
   "protocol": "Search → Verify → Score → Keep/Discard → Log",
   "focus": [
     "Physical AI companies & financing",
@@ -461,5 +461,6 @@
       "score": 2,
       "status": "Discard"
     }
-  ]
+  ],
+  "last_refresh": "2026-06-18 08:05:29 PDT -0700"
 }
