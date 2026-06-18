@@ -190,8 +190,20 @@ screenshot whenever a step can't be confirmed.
 |---|---|
 | `luma_auto_register.py` | Main script / CLI |
 | `config.py` | Loads `.env` |
+| `matching.py` | Pure URL/price classification helpers (unit-tested) |
 | `otp_reader.py` | Reads the login code from Gmail (IMAP) |
 | `invite_scanner.py` | Finds private/invited events in the inbox |
 | `reporter.py` | Cumulative stats + run report + Telegram push |
+| `tests/` | Pytest suite for the pure logic (no browser/network) |
 | `state/` | Saved session + seen-events + stats (gitignored) |
+
+## Development
+
+The non-browser logic is unit-tested and linted; CI runs them on every push:
+
+```bash
+pip install -r requirements-dev.txt
+ruff check .
+pytest -q tests/
+```
 | `screenshots/` | Debug screenshots (gitignored) |

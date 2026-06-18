@@ -42,6 +42,7 @@ from config import (
     Config,
 )
 from invite_scanner import scan_invite_urls
+from matching import looks_like_event_path, looks_paid, normalize_event_url
 from otp_reader import fetch_login_code
 from reporter import Stats, format_report, send_telegram
 
@@ -211,41 +212,15 @@ def discover_event_urls(page: Page, city: str) -> list[str]:
         if not href:
             continue
         # Event pages are short top-level slugs like /abc123 or /e/...
-        # Exclude known non-event paths.
-        if not _looks_like_event_path(href):
+        if not looks_like_event_path(href):
             continue
-        full = href if href.startswith("http") else f"{LUMA_BASE}{href}"
-        full = full.split("?")[0].rstrip("/")
+        full = normalize_event_url(href)
         if full not in seen_local:
             seen_local.add(full)
             urls.append(full)
 
     log.info("Found %d candidate event link(s) on /%s", len(urls), city)
     return urls
-
-
-NON_EVENT_SLUGS = {
-    "home", "signin", "signup", "discover", "create", "settings",
-    "help", "pricing", "about", "terms", "privacy", "explore",
-    "calendars", "user", "p", "blog", "careers", "contact",
-}
-
-
-def _looks_like_event_path(href: str) -> bool:
-    if href.startswith("http") and "lu.ma" not in href:
-        return False
-    path = href.split("lu.ma")[-1] if href.startswith("http") else href
-    path = path.split("?")[0].strip("/")
-    if not path:
-        return False
-    parts = path.split("/")
-    if parts[0] == "e" and len(parts) == 2:
-        return True
-    # Single-segment slug that isn't a reserved word, and isn't a city page.
-    if len(parts) == 1 and parts[0].lower() not in NON_EVENT_SLUGS:
-        # Slugs are typically 5-12 chars of [a-z0-9]; city pages are words.
-        return bool(parts[0]) and any(c.isdigit() for c in parts[0])
-    return False
 
 
 # --------------------------------------------------------------------------- #
@@ -279,7 +254,7 @@ def register_event(
         return "already_registered", title
 
     # Paid? Skip anything that shows a non-free price.
-    if _looks_paid(lowered):
+    if looks_paid(lowered):
         return "skipped_paid", title
 
     # Find the register / get-ticket button.
@@ -318,22 +293,6 @@ def register_event(
     # Couldn't confirm success — capture for debugging but don't crash.
     _screenshot(page, f"register-unconfirmed-{_slug(url)}")
     return "register_unconfirmed", title
-
-
-def _looks_paid(lowered_body: str) -> bool:
-    import re
-
-    # "Free" anywhere usually means at least one free tier exists.
-    if "free" in lowered_body:
-        return False
-    # A currency amount like $25 / £10 / €5 with a non-zero value.
-    for m in re.finditer(r"[$£€]\s?(\d+(?:\.\d{2})?)", lowered_body):
-        try:
-            if float(m.group(1)) > 0:
-                return True
-        except ValueError:
-            continue
-    return False
 
 
 def _find_register_button(page: Page):
@@ -411,6 +370,22 @@ def _slug(url: str) -> str:
     return url.rstrip("/").split("/")[-1][:40]
 
 
+# A realistic desktop fingerprint to reduce anti-bot friction.
+USER_AGENT = (
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+)
+
+
+def _context_options() -> dict:
+    return {
+        "user_agent": USER_AGENT,
+        "viewport": {"width": 1440, "height": 900},
+        "locale": "en-US",
+        "timezone_id": "America/Los_Angeles",
+    }
+
+
 # --------------------------------------------------------------------------- #
 # Orchestration
 # --------------------------------------------------------------------------- #
@@ -423,7 +398,7 @@ def run_scan(cfg: Config, dry_run: bool) -> dict[str, int]:
         storage = (
             str(STORAGE_STATE_PATH) if STORAGE_STATE_PATH.exists() else None
         )
-        context = browser.new_context(storage_state=storage)
+        context = browser.new_context(storage_state=storage, **_context_options())
         page = context.new_page()
 
         if not is_logged_in(page):
@@ -513,7 +488,7 @@ def main() -> int:
     if args.login:
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=cfg.headless)
-            context = browser.new_context()
+            context = browser.new_context(**_context_options())
             login(context, cfg)
             context.close()
             browser.close()

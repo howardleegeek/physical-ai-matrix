@@ -1,0 +1,29 @@
+name: luma-auto-register tests
+
+on:
+  push:
+    paths:
+      - "luma-auto-register/**"
+      - ".github/workflows/luma-tests.yml"
+  pull_request:
+    paths:
+      - "luma-auto-register/**"
+      - ".github/workflows/luma-tests.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: luma-auto-register
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dev deps
+        run: pip install pytest ruff
+      - name: Lint
+        run: ruff check .
+      - name: Test
+        run: pytest -q tests/
