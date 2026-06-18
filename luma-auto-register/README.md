@@ -136,9 +136,29 @@ sudo systemctl enable --now luma-register.timer
 | `KEYWORD_FILTER` | *(empty)* | Only register if title/desc matches one of these |
 | `SCAN_INBOX_INVITES` | `true` | Also register private/invited events from email |
 | `INVITE_LOOKBACK_DAYS` | `30` | How far back to scan invite emails |
+| `REQUEST_APPROVAL_EVENTS` | `false` | Also request to join approval/waitlist events |
+| `TELEGRAM_BOT_TOKEN` | *(empty)* | Send a run summary to Telegram if set |
+| `TELEGRAM_CHAT_ID` | *(empty)* | Telegram chat to notify |
 | `HEADLESS` | `true` | `false` to watch the browser |
 | `POLL_INTERVAL_MINUTES` | `30` | Interval for `--loop` |
 | `MAX_REGISTRATIONS_PER_RUN` | `15` | Safety cap per scan |
+
+## Run report
+
+After each scan the tool prints (and optionally Telegrams) a summary in the
+same style as the cloud `luma_event_manager` cronjob, backed by cumulative
+counters in `state/stats.json`:
+
+```
+Luma minipc1: Event Discovery & Registration
+-------------
+Step 1 discovery: 12
+Step 2: 9 events pending registration
+Step 3 registration: 9（registered 3 / pending_approval 5 / failed 1）
+Final stats: total_registered=3 / pending_approval=5 / failed=1
+Remaining pending for next run: 5
+Skipped: skipped_keyword=4, skipped_paid=2
+```
 
 ---
 
@@ -172,5 +192,6 @@ screenshot whenever a step can't be confirmed.
 | `config.py` | Loads `.env` |
 | `otp_reader.py` | Reads the login code from Gmail (IMAP) |
 | `invite_scanner.py` | Finds private/invited events in the inbox |
-| `state/` | Saved session + seen-events (gitignored) |
+| `reporter.py` | Cumulative stats + run report + Telegram push |
+| `state/` | Saved session + seen-events + stats (gitignored) |
 | `screenshots/` | Debug screenshots (gitignored) |

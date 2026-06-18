@@ -37,11 +37,13 @@ from config import (
     SCREENSHOT_DIR,
     SEEN_EVENTS_PATH,
     STATE_DIR,
+    STATS_PATH,
     STORAGE_STATE_PATH,
     Config,
 )
 from invite_scanner import scan_invite_urls
 from otp_reader import fetch_login_code
+from reporter import Stats, format_report, send_telegram
 
 logging.basicConfig(
     level=logging.INFO,
@@ -286,8 +288,9 @@ def register_event(
         return "no_register_button", title
 
     label = (btn.inner_text() or "").strip().lower()
-    # Skip approval-required / waitlist / external flows for full-auto safety.
-    if any(s in label for s in ("request", "waitlist", "apply")):
+    # Approval-required / waitlist / apply flows: only proceed if opted in.
+    is_approval = any(s in label for s in ("request", "waitlist", "apply"))
+    if is_approval and not cfg.request_approval_events:
         return "skipped_approval", title
 
     if dry_run:
@@ -296,8 +299,8 @@ def register_event(
     btn.click()
     page.wait_for_timeout(2500)
 
-    # A registration modal may require confirming a one-click register.
-    _confirm_registration(page)
+    # A registration modal may require filling fields / confirming.
+    _confirm_registration(page, cfg)
     page.wait_for_timeout(3000)
 
     lowered_after = page.inner_text("body").lower()
@@ -306,6 +309,11 @@ def register_event(
         for s in ("you're in", "you are in", "you're going", "registered", "see you")
     ):
         return "registered", title
+    if is_approval and any(
+        s in lowered_after
+        for s in ("pending", "request sent", "awaiting", "submitted", "review")
+    ):
+        return "requested_approval", title
 
     # Couldn't confirm success — capture for debugging but don't crash.
     _screenshot(page, f"register-unconfirmed-{_slug(url)}")
@@ -346,13 +354,22 @@ def _find_register_button(page: Page):
     return None
 
 
-def _confirm_registration(page: Page) -> None:
-    """Click through a confirmation modal if one appears."""
+def _confirm_registration(page: Page, cfg: Config) -> None:
+    """Fill any required fields, then click through the confirmation modal."""
+    # Some events render a registration form (name/email) before confirming.
+    try:
+        email_field = page.locator("input[type='email']").first
+        if email_field.is_visible(timeout=1000) and not (email_field.input_value()):
+            email_field.fill(cfg.luma_email)
+    except PWTimeout:
+        pass
+
     candidates = [
         page.get_by_role("button", name="Register"),
         page.get_by_role("button", name="One-Click Register"),
         page.get_by_role("button", name="Confirm"),
         page.get_by_role("button", name="Submit"),
+        page.get_by_role("button", name="Request to Join"),
         page.get_by_role("button", name="Done"),
     ]
     for c in candidates:
@@ -428,6 +445,7 @@ def run_scan(cfg: Config, dry_run: bool) -> dict[str, int]:
             )
             sources.append(("inbox-invites", invite_urls))
 
+        discovered = sum(len(urls) for _, urls in sources)
         registered_this_run = 0
         for source_name, urls in sources:
             log.info("Processing %d event(s) from %s", len(urls), source_name)
@@ -462,7 +480,20 @@ def run_scan(cfg: Config, dry_run: bool) -> dict[str, int]:
         context.close()
         browser.close()
 
-    log.info("Scan complete: %s", json.dumps(tally, ensure_ascii=False))
+    # Update cumulative stats and emit a report in the cronjob's style.
+    stats = Stats(STATS_PATH)
+    if not dry_run:
+        stats.apply(tally)
+    pending_remaining = tally.get("requested_approval", 0)
+    report = format_report(
+        tally,
+        stats,
+        discovered=discovered,
+        pending_remaining=pending_remaining,
+        dry_run=dry_run,
+    )
+    log.info("Scan complete:\n%s", report)
+    send_telegram(cfg.telegram_bot_token, cfg.telegram_chat_id, report)
     return tally
 
 

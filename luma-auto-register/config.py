@@ -16,6 +16,7 @@ STATE_DIR = BASE_DIR / "state"
 SCREENSHOT_DIR = BASE_DIR / "screenshots"
 STORAGE_STATE_PATH = STATE_DIR / "storage_state.json"
 SEEN_EVENTS_PATH = STATE_DIR / "seen_events.json"
+STATS_PATH = STATE_DIR / "stats.json"
 
 
 def _split_csv(value: str | None) -> list[str]:
@@ -37,6 +38,9 @@ class Config:
     max_registrations_per_run: int = 15
     scan_inbox_invites: bool = True
     invite_lookback_days: int = 30
+    request_approval_events: bool = False
+    telegram_bot_token: str = ""
+    telegram_chat_id: str = ""
 
     @classmethod
     def load(cls) -> "Config":
@@ -82,4 +86,10 @@ class Config:
             .lower()
             != "false",
             invite_lookback_days=int(os.getenv("INVITE_LOOKBACK_DAYS", "30")),
+            request_approval_events=os.getenv("REQUEST_APPROVAL_EVENTS", "false")
+            .strip()
+            .lower()
+            == "true",
+            telegram_bot_token=os.getenv("TELEGRAM_BOT_TOKEN", "").strip(),
+            telegram_chat_id=os.getenv("TELEGRAM_CHAT_ID", "").strip(),
         )
