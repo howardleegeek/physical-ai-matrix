@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T15:05:29Z",
+  "generated_at": "2026-06-19T15:38:24Z",
   "protocol": "Search → Verify → Score → Keep/Discard → Log",
   "focus": [
     "Physical AI companies & financing",
@@ -12,27 +12,17 @@
     "cagr": "38.2%",
     "market_size_2024": "$12.8B",
     "projected_2030": "$89.5B",
-    "tracked_funding_2025_2026": "$6.0B+ new/updated rounds across NEURA Robotics, Skild, Figure, Physical Intelligence, AMI Labs, General Intuition, Memories.ai, TwelveLabs, Rerun, Hellbender; Physical Intelligence also reported in ~$1B raise talks"
+    "tracked_funding_2025_2026": "$6.8B+ new/updated rounds/funds across NEURA Robotics, Skild, Figure, Physical Intelligence, AMI Labs, General Intuition, Memories.ai, TwelveLabs, Rerun, Hellbender, Config, Nomadic, Agile Robots, and DIC D2S; includes reported 2026 raise talks for General Intuition and Agile Robots."
   },
   "summary_stats": {
-    "companies_tracked": 10,
-    "total_funding": "$6.0B+ new/updated rounds",
+    "companies_tracked": 13,
+    "total_funding": "$6.8B+ new/updated rounds/funds",
     "threat_competitors": 4,
-    "breakthroughs": 8,
-    "verified_sources": 11,
+    "breakthroughs": 9,
+    "verified_sources": 18,
     "discarded_sources": 0
   },
   "recent_developments": [
-    {
-      "date": "2026-04",
-      "title": "Physical Intelligence pi0.7 robot brain",
-      "description": "TechCrunch reports pi0.7 as a step toward a general-purpose robot brain that can figure out tasks it was not explicitly taught."
-    },
-    {
-      "date": "2026-03",
-      "title": "Physical Intelligence reportedly in ~$1B raise talks",
-      "description": "TechCrunch reports Physical Intelligence discussing about $1B in new funding at a valuation above $11B, reinforcing robot-brain software as a major capital-market category."
-    },
     {
       "date": "2026-06",
       "title": "NEURA Robotics up to $1.4B Series C",
@@ -40,8 +30,23 @@
     },
     {
       "date": "2026-06",
+      "title": "Rerun Physical AI data layer",
+      "description": "Rerun official docs verify a unified data layer for multi-rate, multimodal robotics data."
+    },
+    {
+      "date": "2026-06",
       "title": "NVIDIA Cosmos 3 official launch",
       "description": "NVIDIA verified Cosmos 3 as an open world foundation model for Physical AI."
+    },
+    {
+      "date": "2026-06",
+      "title": "General Intuition in talks for $300M round",
+      "description": "TechCrunch reports General Intuition in talks to raise about $300M at around a $2B valuation."
+    },
+    {
+      "date": "2026-06",
+      "title": "Agile Robots $800M round talks",
+      "description": "Secondary reporting verifies SoftBank early talks to anchor an approximately $800M round for Agile Robots."
     },
     {
       "date": "2026-05",
@@ -54,39 +59,39 @@
       "description": "Official blog verifies on-device visual memory across PC, wearables, and IoT."
     },
     {
+      "date": "2026-05",
+      "title": "Memories.ai x NVIDIA visual memory",
+      "description": "Official blog verifies NVIDIA collaboration around persistent visual memory for robots, wearables, and IoT."
+    },
+    {
+      "date": "2026-05",
+      "title": "Config $27M robot-data seed",
+      "description": "TechCrunch verifies Config raised $27M led by Samsung Venture Investment for robot-data infrastructure."
+    },
+    {
+      "date": "2026-05",
+      "title": "DIC D2S Physical AI fund",
+      "description": "DIC official IR verifies a Zurich-based investment vehicle for Physical AI startup investment."
+    },
+    {
       "date": "2026-04",
       "title": "TwelveLabs Marengo/Pegasus",
       "description": "Official product page verifies video foundation models for retrieval and embeddings."
     },
     {
+      "date": "2026-04",
+      "title": "World Labs Spark 2.0",
+      "description": "Official World Labs blog verifies Spark 2.0 for streaming 3D Gaussian Splatting worlds to web/mobile/VR."
+    },
+    {
       "date": "2026-03",
-      "title": "AMI Labs World Models",
-      "description": "Yann LeCun-backed AMI Labs raised $1.03B to build world models."
+      "title": "Nomadic $8.4M Seed",
+      "description": "Nomadic raised $8.4M to build a spatial intelligence layer for Physical AI systems."
     },
     {
-      "date": "2026-02",
-      "title": "World Labs World API",
-      "description": "World Labs expanded Marble with a World API for explorable 3D worlds."
-    },
-    {
-      "date": "2026-01",
-      "title": "Skild AI Series C",
-      "description": "Skild AI raised a $1.4B Series C led by SoftBank for omni-bodied intelligence."
-    },
-    {
-      "date": "2025-11",
-      "title": "Physical Intelligence Series B",
-      "description": "Physical Intelligence raised $600M at a $5.6B valuation for universal robot-brain software."
-    },
-    {
-      "date": "2025-10",
-      "title": "General Intuition Seed",
-      "description": "General Intuition raised $133.7M to train spatial-temporal agents from gaming and video data."
-    },
-    {
-      "date": "2025-09",
-      "title": "Figure AI Series C",
-      "description": "Figure AI exceeded $1B in Series C funding at a $39B valuation for autonomous general-purpose humanoid robots."
+      "date": "2026-03",
+      "title": "Physical Intelligence reportedly in ~$1B raise talks",
+      "description": "TechCrunch reports Physical Intelligence discussing about $1B in new funding at a valuation above $11B."
     }
   ],
   "companies": [
@@ -98,8 +103,37 @@
       "focus": "Cognitive humanoid robots and Physical AI financial/intelligence layer",
       "score": 5,
       "status": "Keep",
-      "source": "https://neura-robotics.com/record-series-c/",
       "why": "Largest new financing signal; validates capital-market demand for humanoid bodies plus robot intelligence infrastructure."
+    },
+    {
+      "name": "General Intuition",
+      "funding": "$133.7M Seed; in talks for ~$300M at ~$2B valuation",
+      "date": "2026-06",
+      "investors": "Khosla Ventures, General Catalyst, Raine; new round sources reported",
+      "focus": "Spatial-temporal reasoning from video-game clips",
+      "score": 5,
+      "status": "Keep",
+      "why": "New spatial intelligence funding signal; directly relevant to simulation-to-world agents."
+    },
+    {
+      "name": "Agile Robots",
+      "funding": "In talks for ~$800M round",
+      "date": "2026-06",
+      "investors": "SoftBank reported in early talks",
+      "focus": "Industrial robotics and humanoid platform",
+      "score": 4,
+      "status": "Keep",
+      "why": "Large late-stage humanoid/industrial robotics financing signal; confirms capital intensity of robot deployment."
+    },
+    {
+      "name": "Memories.ai",
+      "funding": "$16M reported; NVIDIA visual-memory partnership",
+      "date": "2026-05",
+      "investors": "Susa Ventures-led reported; NVIDIA/Qualcomm/Samsung ecosystem named",
+      "focus": "Large Visual Memory Model, video search, on-device visual memory",
+      "score": 5,
+      "status": "Keep",
+      "why": "Direct visual-memory competitor for wearables/robotics; LUCI pushes zero-cloud-latency indexing."
     },
     {
       "name": "Hellbender",
@@ -109,8 +143,58 @@
       "focus": "Physical AI edge cameras and domestic manufacturing infrastructure",
       "score": 5,
       "status": "Keep",
-      "source": "https://hellbender.com/hellbender-secures-12-5m-seed-round-to-accelerate-domestic-manufacturing-of-physical-ai-and-launch-its-on-edge-camera-line/",
       "why": "New Edge AI company; directly relevant to low-latency robotics perception and on-device camera platforms."
+    },
+    {
+      "name": "Config",
+      "funding": "$27M Seed",
+      "date": "2026-05",
+      "investors": "Samsung Venture Investment-led; Korean manufacturers backing",
+      "focus": "Robot-data infrastructure / “TSMC of robot data”",
+      "score": 5,
+      "status": "Keep",
+      "why": "New Physical AI data-layer company; validates robot motion data as a strategic moat."
+    },
+    {
+      "name": "TwelveLabs",
+      "funding": "$30M funding; active 2026 model/platform updates",
+      "date": "2026-04",
+      "investors": "Databricks, Snowflake, SK Telecom, HubSpot Ventures reported",
+      "focus": "Marengo/Pegasus video foundation models and video-to-text APIs",
+      "score": 4,
+      "status": "Keep",
+      "why": "Mature video understanding platform; strongest benchmark for Oyster visual memory/search stack."
+    },
+    {
+      "name": "Physical Intelligence (Pi)",
+      "funding": "$600M Series B at $5.6B valuation; reportedly in talks for ~$1B at >$11B valuation",
+      "date": "2026-03",
+      "investors": "CapitalG, Lux, Bezos, Sequoia, Redpoint",
+      "focus": "Robot foundation models / universal robot brain",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://outsetcapital.com/blog/physical-intelligence-series-b",
+      "why": "Highest-priority watch target for general-purpose robot intelligence software; 2026 financing and pi0.7 product signals keep Pi central to the robot-brain race."
+    },
+    {
+      "name": "Nomadic",
+      "funding": "$8.4M Seed",
+      "date": "2026-03",
+      "investors": "TQ Ventures-led reported",
+      "focus": "Spatial intelligence layer for Physical AI systems",
+      "score": 4,
+      "status": "Keep",
+      "why": "New spatial-intelligence infrastructure company; relevant to Oyster spatial recall and autonomy data workflows."
+    },
+    {
+      "name": "World Labs",
+      "funding": "Undisclosed; spatial AI platform",
+      "date": "2026-02",
+      "investors": "Fei-Fei Li-led spatial AI team",
+      "focus": "Marble and World API for navigable 3D worlds",
+      "score": 4,
+      "status": "Keep",
+      "why": "Spatial Intelligence infrastructure competitor; bridges world generation, simulation, and Physical AI planning."
     },
     {
       "name": "Skild AI",
@@ -135,50 +219,6 @@
       "why": "Capital and valuation set the commercialization benchmark for humanoid Physical AI."
     },
     {
-      "name": "Physical Intelligence (Pi)",
-      "funding": "$600M Series B at $5.6B valuation; reportedly in talks for ~$1B at >$11B valuation",
-      "date": "2026-03",
-      "investors": "CapitalG, Lux, Bezos, Sequoia, Redpoint",
-      "focus": "Robot foundation models / universal robot brain",
-      "score": 5,
-      "status": "Keep",
-      "source": "https://outsetcapital.com/blog/physical-intelligence-series-b",
-      "why": "Highest-priority watch target for general-purpose robot intelligence software; 2026 financing and pi0.7 product signals keep Pi central to the robot-brain race."
-    },
-    {
-      "name": "General Intuition",
-      "funding": "$133.7M Seed",
-      "date": "2025-10",
-      "investors": "Khosla Ventures, General Catalyst, Raine",
-      "focus": "Spatial-temporal reasoning from video-game clips",
-      "score": 5,
-      "status": "Keep",
-      "source": "https://www.generalintuition.com/",
-      "why": "New spatial intelligence lab; directly relevant to simulation-to-world agents."
-    },
-    {
-      "name": "Memories.ai",
-      "funding": "$16M reported; official site emphasizes LVMM",
-      "date": "2026-03",
-      "investors": "Susa Ventures-led reported; Qualcomm/Samsung named on site",
-      "focus": "Large Visual Memory Model, video search, on-device visual memory",
-      "score": 4,
-      "status": "Keep",
-      "source": "https://memories.ai/",
-      "why": "Competitor for visual memory layer; strong fit for wearables/robotics but funding needs secondary-source verification."
-    },
-    {
-      "name": "TwelveLabs",
-      "funding": "$30M funding; active 2026 model/platform updates",
-      "date": "2026-04",
-      "investors": "Databricks, Snowflake, SK Telecom, HubSpot Ventures reported",
-      "focus": "Marengo/Pegasus video foundation models and video-to-text APIs",
-      "score": 4,
-      "status": "Keep",
-      "source": "https://www.twelvelabs.io/product/models-overview",
-      "why": "Mature video understanding platform; strongest benchmark for Oyster visual memory/search stack."
-    },
-    {
       "name": "Rerun",
       "funding": "$17M Seed; $20.2M total reported",
       "date": "2025-03",
@@ -186,30 +226,18 @@
       "focus": "Data layer for multimodal Physical AI telemetry",
       "score": 4,
       "status": "Keep",
-      "source": "https://rerun.io/blog/physical-ai-data",
       "why": "Infrastructure competitor/partner for robot, drone, and car data logging."
-    },
-    {
-      "name": "World Labs",
-      "funding": "Undisclosed; spatial AI platform",
-      "date": "2026-02",
-      "investors": "Fei-Fei Li-led spatial AI team",
-      "focus": "Marble and World API for navigable 3D worlds",
-      "score": 4,
-      "status": "Keep",
-      "source": "https://www.worldlabs.ai/blog/announcing-the-world-api",
-      "why": "Spatial Intelligence infrastructure competitor; bridges world generation, simulation, and Physical AI planning."
     }
   ],
   "breakthroughs": [
     {
-      "title": "Physical Intelligence pi0.7 robot brain",
-      "date": "2026-04",
-      "category": "Robot Foundation Models",
+      "title": "Rerun Physical AI Data Layer",
+      "date": "2026-06",
+      "category": "Robotics Data Infrastructure",
       "score": 5,
       "status": "Keep",
-      "source": "https://techcrunch.com/2026/04/16/physical-intelligence-a-hot-robotics-startup-says-its-new-robot-brain-can-figure-out-tasks-it-was-never-taught/",
-      "summary": "pi0.7 is reported as an early but meaningful step toward a general-purpose robot brain that can solve tasks not explicitly taught."
+      "source": "https://rerun.io/docs/overview/what-is-rerun",
+      "summary": "Unified data layer for multi-rate, multimodal robotics data from raw recordings to training."
     },
     {
       "title": "NVIDIA Cosmos 3",
@@ -218,25 +246,7 @@
       "score": 5,
       "status": "Keep",
       "source": "https://blogs.nvidia.com/blog/cosmos-3-physical-ai-open-world-foundation-model/",
-      "summary": "Official NVIDIA verification: open world foundation model for Physical AI combining understanding, simulation, and action generation."
-    },
-    {
-      "title": "Google DeepMind Genie 3",
-      "date": "2025-08",
-      "category": "World Models",
-      "score": 5,
-      "status": "Keep",
-      "source": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
-      "summary": "General-purpose world model that generates interactive environments from simple text descriptions."
-    },
-    {
-      "title": "World Labs Marble + World API",
-      "date": "2026-01",
-      "category": "Spatial Intelligence",
-      "score": 5,
-      "status": "Keep",
-      "source": "https://www.worldlabs.ai/blog/announcing-the-world-api",
-      "summary": "Marble enables spatially cohesive, persistent 3D world generation from images, video, or text."
+      "summary": "NVIDIA official blog verifies Cosmos 3 as an open world foundation model for Physical AI, combining vision reasoning, simulation, and action generation."
     },
     {
       "title": "Memories.ai Project LUCI",
@@ -248,6 +258,24 @@
       "summary": "On-device visual memory demo targeting zero-cloud-latency indexing across PC, wearables, and IoT."
     },
     {
+      "title": "Hellbender Edge Camera Platform",
+      "date": "2026-05",
+      "category": "Edge AI",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://hellbender.com/hellbender-secures-12-5m-seed-round-to-accelerate-domestic-manufacturing-of-physical-ai-and-launch-its-on-edge-camera-line/",
+      "summary": "New Physical AI infrastructure company targeting on-edge camera lines and domestic manufacturing for low-latency robotics perception."
+    },
+    {
+      "title": "World Labs Spark 2.0",
+      "date": "2026-04",
+      "category": "World Models",
+      "score": 4,
+      "status": "Keep",
+      "source": "https://www.worldlabs.ai/blog/spark-2.0",
+      "summary": "World Labs official blog verifies Spark 2.0 for streaming large 3D Gaussian Splatting worlds to web/mobile/VR devices."
+    },
+    {
       "title": "TwelveLabs Marengo/Pegasus",
       "date": "2026-04",
       "category": "Video Intelligence",
@@ -257,25 +285,214 @@
       "summary": "Marengo and Pegasus make video retrieval, embeddings, and video-language reasoning production-grade."
     },
     {
-      "title": "Rerun Physical AI Data Layer",
-      "date": "2026-06",
-      "category": "Robotics Data Infrastructure",
+      "title": "Physical Intelligence pi0.7 robot brain",
+      "date": "2026-04",
+      "category": "Robot Foundation Models",
       "score": 5,
       "status": "Keep",
-      "source": "https://rerun.io/docs/overview/what-is-rerun",
-      "summary": "Unified data layer for multi-rate, multimodal robotics data from raw recordings to training."
+      "source": "https://techcrunch.com/2026/04/16/physical-intelligence-a-hot-robotics-startup-says-its-new-robot-brain-can-figure-out-tasks-it-was-never-taught/",
+      "summary": "pi0.7 is reported as an early but meaningful step toward a general-purpose robot brain that can solve tasks not explicitly taught."
     },
     {
-      "title": "Hellbender Edge Camera Platform",
-      "date": "2026-05",
-      "category": "Edge AI",
+      "title": "World Labs World API",
+      "date": "2026-01",
+      "category": "World Models",
       "score": 5,
       "status": "Keep",
-      "source": "https://hellbender.com/hellbender-secures-12-5m-seed-round-to-accelerate-domestic-manufacturing-of-physical-ai-and-launch-its-on-edge-camera-line/",
-      "summary": "New Physical AI infrastructure company targeting on-edge camera lines and domestic manufacturing for low-latency robotics perception."
+      "source": "https://www.worldlabs.ai/blog/announcing-the-world-api",
+      "summary": "World Labs official blog verifies World API, a public interface for generating explorable 3D worlds from text, images, panoramas, multi-view inputs, and video."
+    },
+    {
+      "title": "Google DeepMind Genie 3",
+      "date": "2025-08",
+      "category": "World Models",
+      "score": 5,
+      "status": "Keep",
+      "source": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
+      "summary": "General-purpose world model that generates interactive environments from simple text descriptions."
     }
   ],
   "verification": [
+    {
+      "search_query": "Rerun Physical AI data layer robotics 2026",
+      "category": "competitor",
+      "title": "Rerun Physical AI data layer",
+      "date": "2026-06",
+      "score": 5,
+      "decision": "Keep",
+      "source": "https://rerun.io/docs/overview/what-is-rerun",
+      "source_title": "The Data Layer for Physical AI — Rerun",
+      "status": 200,
+      "body_length": 9623,
+      "keyword_hit_count": 5,
+      "focus": "unified data layer for multimodal robotics data",
+      "summary": "Rerun official docs verify it as a unified data layer for multi-rate, multimodal robotics data from raw recordings to training."
+    },
+    {
+      "search_query": "NVIDIA Cosmos 3 world foundation model Physical AI 2026",
+      "category": "technology",
+      "title": "NVIDIA Cosmos 3",
+      "date": "2026-06",
+      "score": 5,
+      "decision": "Keep",
+      "source": "https://blogs.nvidia.com/blog/cosmos-3-physical-ai-open-world-foundation-model/",
+      "source_title": "How Cosmos 3 Helps Physical AI Think Before It Acts | NVIDIA Blog",
+      "status": 200,
+      "body_length": 7767,
+      "keyword_hit_count": 5,
+      "focus": "open world foundation model for Physical AI",
+      "summary": "NVIDIA official blog verifies Cosmos 3 as an open world foundation model for Physical AI, combining vision reasoning, simulation, and action generation."
+    },
+    {
+      "search_query": "Physical AI funding June 2026 NEURA Robotics Series C Tether",
+      "category": "financing",
+      "title": "NEURA Robotics Series C",
+      "date": "2026-06",
+      "score": 5,
+      "decision": "Keep",
+      "source": "https://neura-robotics.com/record-series-c/",
+      "source_title": "NEURA Robotics Announces Record Series C of up to $1.4B",
+      "status": 200,
+      "body_length": 14550,
+      "keyword_hit_count": 5,
+      "focus": "up to $1.4B Series C for cognitive/physical robotics",
+      "summary": "Official NEURA verification: up to $1.4B Series C for cognitive robotics and Physical AI infrastructure."
+    },
+    {
+      "search_query": "General Intuition $300M $2B valuation spatial temporal agents 2026",
+      "category": "competitor",
+      "title": "General Intuition $300M raise talks",
+      "date": "2026-06",
+      "score": 5,
+      "decision": "Keep",
+      "source": "https://techcrunch.com/2026/06/18/general-intuition-in-talks-to-raise-300m-at-around-2b-valuation/",
+      "source_title": "General Intuition in talks to raise $300M at around $2B valuation",
+      "status": 200,
+      "body_length": 5022,
+      "keyword_hit_count": 5,
+      "focus": "$300M raise talks at around $2B valuation for spatial-temporal agents",
+      "summary": "TechCrunch verifies General Intuition is in talks to raise around $300M at a just-over-$2B valuation for spatial-temporal agents trained on gaming data."
+    },
+    {
+      "search_query": "Agile Robots $800M SoftBank humanoid robotics funding 2026",
+      "category": "financing",
+      "title": "Agile Robots $800M round talks",
+      "date": "2026-06",
+      "score": 5,
+      "decision": "Keep",
+      "source": "https://startupfortune.com/softbank-is-in-early-talks-to-anchor-an-800-million-round-for-agile-robots-as-the-humanoid-race-enters-its-capital-intensive-phase/",
+      "source_title": "SoftBank in early talks to anchor an $800M round for Agile Robots",
+      "status": 200,
+      "body_length": 10205,
+      "keyword_hit_count": 5,
+      "focus": "$800M round talks for industrial/humanoid robotics",
+      "summary": "Secondary reporting verifies SoftBank early talks to anchor an approximately $800M round for Agile Robots."
+    },
+    {
+      "search_query": "Memories.ai Project LUCI visual memory robotics 2026",
+      "category": "competitor",
+      "title": "Memories.ai Project LUCI",
+      "date": "2026-05",
+      "score": 5,
+      "decision": "Keep",
+      "source": "https://memories.ai/blog/project-luci-microsoft-build",
+      "source_title": "Project LUCI at Microsoft Build 2026",
+      "status": 200,
+      "body_length": 4872,
+      "keyword_hit_count": 5,
+      "focus": "on-device visual memory across PC, wearables, IoT",
+      "summary": "Memories.ai official blog verifies Project LUCI as on-device visual memory across PC, wearables, and IoT."
+    },
+    {
+      "search_query": "Memories.ai NVIDIA visual memory LUCI wearables robotics 2026",
+      "category": "competitor",
+      "title": "Memories.ai NVIDIA collaboration",
+      "date": "2026-05",
+      "score": 5,
+      "decision": "Keep",
+      "source": "https://memories.ai/blog/collaboration-with-nvidia",
+      "source_title": "Memories.ai Brings Persistent Visual Memory to Robots, Wearables and IoT",
+      "status": 200,
+      "body_length": 5909,
+      "keyword_hit_count": 5,
+      "focus": "NVIDIA collaboration for persistent visual memory across robots, wearables, and IoT",
+      "summary": "Official Memories.ai blog verifies NVIDIA collaboration and persistent visual memory positioning for robots, wearables, and IoT."
+    },
+    {
+      "search_query": "Physical AI funding May 2026 Hellbender $12.5M Seed on-edge camera",
+      "category": "financing",
+      "title": "Hellbender Seed",
+      "date": "2026-05",
+      "score": 4,
+      "decision": "Keep",
+      "source": "https://hellbender.com/hellbender-secures-12-5m-seed-round-to-accelerate-domestic-manufacturing-of-physical-ai-and-launch-its-on-edge-camera-line/",
+      "source_title": "Hellbender Secures $12.5M Seed Round",
+      "status": 200,
+      "body_length": 2138,
+      "keyword_hit_count": 5,
+      "focus": "$12.5M Seed for Physical AI edge cameras",
+      "summary": "Official Hellbender verification: $12.5M Seed for Physical AI edge cameras and domestic manufacturing."
+    },
+    {
+      "search_query": "DIC D2S physical AI startup fund Zurich $62M 2026",
+      "category": "financing",
+      "title": "DIC D2S Physical AI fund",
+      "date": "2026-05",
+      "score": 3,
+      "decision": "Keep",
+      "source": "https://www.dic-global.com/en/news/2026/ir/20260512170513.html",
+      "source_title": "DIC Establishes Investment Management Subsidiary DIC D2S",
+      "status": 200,
+      "body_length": 10793,
+      "keyword_hit_count": 3,
+      "focus": "$62M physical-AI startup investment fund / Zurich base",
+      "summary": "DIC official IR verifies DIC D2S as a Zurich-based investment management subsidiary for physical-AI startup investment."
+    },
+    {
+      "search_query": "Config raises $27M Samsung robot data TSMC 2026 TechCrunch",
+      "category": "financing",
+      "title": "Config $27M Seed",
+      "date": "2026-05",
+      "score": 5,
+      "decision": "Keep",
+      "source": "https://techcrunch.com/2026/05/11/koreas-biggest-manufacturers-back-config-the-tsmc-of-robot-data/",
+      "source_title": "Korea's biggest manufacturers back Config, the TSMC of robot data",
+      "status": 200,
+      "body_length": 7251,
+      "keyword_hit_count": 5,
+      "focus": "$27M seed for robot-data infrastructure backed by Korean manufacturers",
+      "summary": "TechCrunch verifies Config raised $27M led by Samsung Venture Investment to build the “TSMC of robot data”."
+    },
+    {
+      "search_query": "World Labs Spark 2.0 3D Gaussian splatting mobile VR 2026",
+      "category": "technology",
+      "title": "World Labs Spark 2.0",
+      "date": "2026-04",
+      "score": 4,
+      "decision": "Keep",
+      "source": "https://www.worldlabs.ai/blog/spark-2.0",
+      "source_title": "Streaming 3DGS worlds on the web - World Labs",
+      "status": 200,
+      "body_length": 32724,
+      "keyword_hit_count": 4,
+      "focus": "streamable 3D Gaussian Splatting worlds for mobile/VR",
+      "summary": "World Labs official blog verifies Spark 2.0 for streaming large 3D Gaussian Splatting worlds to web/mobile/VR devices."
+    },
+    {
+      "search_query": "TwelveLabs Marengo Pegasus video foundation model 2026",
+      "category": "competitor",
+      "title": "TwelveLabs Marengo/Pegasus",
+      "date": "2026-04",
+      "score": 5,
+      "decision": "Keep",
+      "source": "https://www.twelvelabs.io/product/models-overview",
+      "source_title": "Video Foundation Models: Marengo & Pegasus - TwelveLabs",
+      "status": 200,
+      "body_length": 6195,
+      "keyword_hit_count": 5,
+      "focus": "video foundation models for retrieval and embeddings",
+      "summary": "TwelveLabs official product page verifies Marengo and Pegasus video foundation models for multimodal retrieval, embeddings, and video-language reasoning."
+    },
     {
       "search_query": "Physical Intelligence pi0.7 robot brain 2026",
       "category": "technology",
@@ -307,64 +524,34 @@
       "summary": "Secondary reporting verifies Physical Intelligence remains a high-valuation robot-brain software competitor and financing benchmark."
     },
     {
-      "search_query": "Physical AI funding June 2026 NEURA Robotics Hellbender Series C Seed",
+      "search_query": "Nomadic raises $8.4M Physical AI spatial intelligence layer 2026",
       "category": "financing",
-      "title": "NEURA Robotics Series C",
-      "date": "2026-06",
+      "title": "Nomadic $8.4M Seed",
+      "date": "2026-03",
       "score": 5,
       "decision": "Keep",
-      "source": "https://neura-robotics.com/record-series-c/",
-      "source_title": "NEURA Robotics Announces Record Series C of up to $1.4B",
+      "source": "https://www.webwire.com/ViewPressRel.asp?aId=352600",
+      "source_title": "Nomadic Emerges with $8.4M to Build Physical AI Training Platform",
       "status": 200,
-      "body_length": 14566,
+      "body_length": 6726,
       "keyword_hit_count": 5,
-      "focus": "up to $1.4B Series C for cognitive/physical robotics",
-      "summary": "NEURA Robotics announced up to $1.4B Series C financing, positioning cognitive robotics and Physical AI infrastructure as a major 2026 capital-market signal."
+      "focus": "$8.4M seed for spatial intelligence layer for Physical AI",
+      "summary": "Webwire press release verifies Nomadic raised $8.4M to build a spatial intelligence layer for Physical AI systems."
     },
     {
-      "search_query": "Physical AI funding June 2026 NEURA Robotics Hellbender Series C Seed",
-      "category": "financing",
-      "title": "Hellbender Seed",
-      "date": "2026-05",
+      "search_query": "World Labs World API 3D worlds 2026 Marble",
+      "category": "technology",
+      "title": "World Labs World API",
+      "date": "2026-01",
       "score": 5,
       "decision": "Keep",
-      "source": "https://hellbender.com/hellbender-secures-12-5m-seed-round-to-accelerate-domestic-manufacturing-of-physical-ai-and-launch-its-on-edge-camera-line/",
-      "source_title": "Hellbender Secures $12.5M Seed Round",
+      "source": "https://www.worldlabs.ai/blog/announcing-the-world-api",
+      "source_title": "Announcing the World API | World Labs",
       "status": 200,
-      "body_length": 8007,
+      "body_length": 7084,
       "keyword_hit_count": 5,
-      "focus": "$12.5M Seed for Physical AI edge cameras",
-      "summary": "Hellbender raised $12.5M Seed for Physical AI edge cameras and domestic manufacturing, reinforcing Edge AI perception infrastructure as a funded category."
-    },
-    {
-      "search_query": "Memories.ai Project LUCI visual memory robotics 2026",
-      "category": "competitor",
-      "title": "Memories.ai Project LUCI",
-      "date": "2026-05",
-      "score": 5,
-      "decision": "Keep",
-      "source": "https://memories.ai/blog/project-luci-microsoft-build",
-      "source_title": "Project LUCI at Microsoft Build 2026",
-      "status": 200,
-      "body_length": 4870,
-      "keyword_hit_count": 5,
-      "focus": "on-device visual memory across PC, wearables, IoT",
-      "summary": "Memories.ai verified Project LUCI as an on-device visual memory initiative spanning PC, wearables, and IoT, directly relevant to Oyster visual-memory workflows."
-    },
-    {
-      "search_query": "TwelveLabs Marengo Pegasus video foundation model 2026",
-      "category": "competitor",
-      "title": "TwelveLabs Marengo/Pegasus",
-      "date": "2026-04",
-      "score": 5,
-      "decision": "Keep",
-      "source": "https://www.twelvelabs.io/product/models-overview",
-      "source_title": "Video Foundation Models: Marengo & Pegasus - TwelveLabs",
-      "status": 200,
-      "body_length": 6198,
-      "keyword_hit_count": 5,
-      "focus": "video foundation models for retrieval and embeddings",
-      "summary": "TwelveLabs official product page verifies Marengo and Pegasus video foundation models for multimodal retrieval, embeddings, and video-language reasoning."
+      "focus": "API for generating explorable 3D worlds",
+      "summary": "World Labs official blog verifies World API, a public interface for generating explorable 3D worlds from text, images, panoramas, multi-view inputs, and video."
     },
     {
       "search_query": "General Intuition spatial temporal agents seed 2025 2026",
@@ -380,51 +567,6 @@
       "keyword_hit_count": 5,
       "focus": "foundation models for spatial-temporal reasoning environments",
       "summary": "General Intuition official site verifies a focus on foundation models for environments requiring deep spatial and temporal reasoning."
-    },
-    {
-      "search_query": "Rerun Physical AI data layer robotics 2026",
-      "category": "competitor",
-      "title": "Rerun Physical AI data layer",
-      "date": "2026-06",
-      "score": 5,
-      "decision": "Keep",
-      "source": "https://rerun.io/docs/overview/what-is-rerun",
-      "source_title": "The Data Layer for Physical AI — Rerun",
-      "status": 200,
-      "body_length": 9454,
-      "keyword_hit_count": 5,
-      "focus": "unified data layer for multimodal robotics data",
-      "summary": "Rerun official docs verify it as a unified data layer for multi-rate, multimodal robotics data from raw recordings to training."
-    },
-    {
-      "search_query": "NVIDIA Cosmos 3 world foundation model Physical AI 2026",
-      "category": "technology",
-      "title": "NVIDIA Cosmos 3",
-      "date": "2026-06",
-      "score": 5,
-      "decision": "Keep",
-      "source": "https://blogs.nvidia.com/blog/cosmos-3-physical-ai-open-world-foundation-model/",
-      "source_title": "How Cosmos 3 Helps Physical AI Think Before It Acts | NVIDIA Blog",
-      "status": 200,
-      "body_length": 7766,
-      "keyword_hit_count": 5,
-      "focus": "open world foundation model for Physical AI",
-      "summary": "NVIDIA official blog verifies Cosmos 3 as an open world foundation model for Physical AI, combining vision reasoning, simulation, and action generation."
-    },
-    {
-      "search_query": "World Labs World API 3D worlds 2026 Marble",
-      "category": "technology",
-      "title": "World Labs World API",
-      "date": "2026-01",
-      "score": 5,
-      "decision": "Keep",
-      "source": "https://www.worldlabs.ai/blog/announcing-the-world-api",
-      "source_title": "Announcing the World API | World Labs",
-      "status": 200,
-      "body_length": 7082,
-      "keyword_hit_count": 5,
-      "focus": "API for generating explorable 3D worlds",
-      "summary": "World Labs official blog verifies World API, a public interface for generating explorable 3D worlds from text, images, panoramas, multi-view inputs, and video."
     },
     {
       "search_query": "Google DeepMind Genie 3 world model 2026",
@@ -462,5 +604,5 @@
       "status": "Discard"
     }
   ],
-  "last_refresh": "2026-06-18 08:05:29 PDT -0700"
+  "last_refresh": "2026-06-19 08:38:24  "
 }
