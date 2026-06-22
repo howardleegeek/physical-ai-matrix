@@ -1,0 +1,10 @@
+# Core: MCAP writer (only hard runtime dependency for conversion)
+mcap>=1.1.1
+
+# Downloading a public Google Drive folder to the local machine
+gdown>=5.1.0
+
+# Only needed for `--demo` (synthesising sample images); not required to
+# convert real data, which is read straight off disk as raw bytes.
+numpy>=1.24
+pillow>=10.0

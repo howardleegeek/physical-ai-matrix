@@ -1,1 +1,8 @@
 .vercel
+
+# MCAP conversion artifacts
+demo_dataset/
+demo_mcap_out/
+mcap_out/
+dataset_root/
+__pycache__/
